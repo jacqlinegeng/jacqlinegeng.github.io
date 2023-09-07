@@ -9,14 +9,17 @@ import { Header } from './Components/Header/Header';
 import { Contact } from './Components/Contact/Contact';
 import { ScrollToTop } from './Components/ScrollToTop/ScrollToTop';
 import { Footer } from './Components/Footer/Footer';
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Home from './Components/home/Home';
 
 
 const App = () => {
   return (
     <>
     <Header />
+
+    <main className='main'>
+      <Home />
+    </main>
     </>
   );
 }
