@@ -15,12 +15,24 @@
   justify-content: center;
 }
 
+.introduction_logocontainer > img {
+  width: 25%;
+  height: 55%;
+  border-radius: 50%;
+  border: 2px solid var(--clr-primary);
+}
+
 .introduction_datacontainer {
   flex-basis: 55%;
 }
 
 .introduction_datacontainer > h4:nth-child(1) {
   margin-top: 0;
+  line-height: 1.4em;
+}
+
+.introduction_datacontainer > h4:nth-child(2) {
+  margin-top: 1.4em;
   line-height: 1.4em;
 }
 
@@ -31,7 +43,7 @@
 
 .icons {
   position: relative;
-  top: 5px;
+  top: 1px;
   color: var(--clr-fg-alt);
   margin-right: 0.5em;
 }
@@ -48,7 +60,7 @@
   .introduction_logocontainer > img {
     width: 60%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 20px;  
     border-radius: 50%;
     border: 2px solid var(--clr-primary);
   }

@@ -2,7 +2,7 @@ import React from "react";
 import "./Introduction.css";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { ThemeContext } from "../../Context/theme";
-// import profilePic from "../../assets/";
+import profilePic from "../../assets/profile-pic.png";
 
 export const Introduction = () => {
   const [{ themename }] = React.useContext(ThemeContext);
@@ -16,7 +16,7 @@ export const Introduction = () => {
           </h2>
           <div className={"introduction" + themename}>
             <div className="introduction_logocontainer">
-              <img src={""} alt="Images" />
+              <img src={profilePic} alt="Images" />
             </div>
             <div className="introduction_datacontainer">
               <h4>

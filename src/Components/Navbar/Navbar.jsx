@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [showNavList, setShowNavList] = React.useState(false);
 
   const toggleNavList = (id) => {
-    let element = document.getElementById(id);
+    var element = document.getElementById(id);
     if (element) {
       element.scrollIntoView();
     }
@@ -71,7 +71,7 @@ export const Navbar = () => {
           </li>
           <li className="nav__list-item">
             <a
-              href="https://drive.google.com/file/d/1K75bI4fgHjcCe9oeMD5hQQk_Cjf9p2Iw/view"
+              href="https://drive.google.com/file/d/1K75bI4fgHjcCe9oeMD5hQQk_Cjf9p2Iw/view?usp=sharing"
               onClick={toggleNavList}
               className="link link--nav"
               target="_blank"
