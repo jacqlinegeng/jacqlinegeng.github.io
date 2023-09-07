@@ -13,27 +13,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 
-function App() {
-  const [{ themename }] = React.useContext(ThemeContext);
-  React.useEffect(() => {
-    Aos.init({ duration: 1500 });
-  }, []);
+const App = () => {
   return (
-    <div id="top" className={`${themename} app`}>
-      <section id="home">
-        <Header />
-      </section>
-      <main>
-        <About />
-        <Github />
-      <section id="contact">
-        <Contact />
-      </section>
-        
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <>
+    <Header />
+    </>
   );
 }
 

@@ -1,26 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import { ThemeContext } from "../../Context/theme";
 // import Image from "./../..assets/S-logo.png";
 import "./Header.css";
 
-
 export const Header = () => {
-  const [{ themename }] = React.useContext(ThemeContext);
-
+  /* Toggle Menu */
+  const [Toggle, showMenu] = useState(false);
   return (
-    <>
-      <header className={"header center " + themename}>
-        <h3>
-          <a href="home" className="link">
-            <span>
-              <img src={""} alt="logo" />
-            </span>
-            jacqline
+    <div>
+      <header className="header">
+        <nav className="nav container">
+          <a href="index.html" className="nav__logo">
+            Geng
           </a>
-        </h3>
-        <Navbar />
+
+          <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
+            <ul className="nav__list grid">
+              <li className="nav__item">
+                <a href="#home" className="nav__link active-link">
+                  <i className="uil uil-estate nav__icon"></i> Home
+                </a>
+              </li>
+
+              <li className="nav__item">
+                <a href="#about" className="nav__link">
+                  <i className="uil uil-user nav__icon"></i> About
+                </a>
+              </li>
+
+              <li className="nav__item">
+                <a href="#skills" className="nav__link">
+                  <i className="uil uil-file-alt nav__icon"></i> Skills
+                </a>
+              </li>
+
+              <li className="nav__item">
+                <a href="#projects" className="nav__link">
+                  <i className="uil uil-folder-heart nav__icon"></i> Projects
+                </a>
+              </li>
+
+              <li className="nav__item">
+                <a href="#contact" className="nav__link">
+                  <i className="uil uil-message nav__icon"></i> Contact
+                </a>
+              </li>
+            </ul>
+
+            <i
+              class="uil uil-times nav__close"
+              onClick={() => showMenu(!Toggle)}
+            ></i>
+          </div>
+
+          <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
+            <i class="uil uil-apps"></i>
+          </div>
+        </nav>
       </header>
-    </>
+    </div>
   );
 };
