@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Navbar } from "../Navbar/Navbar";
-import { ThemeContext } from "../../Context/theme";
 import "./Header.css";
 
 export const Header = () => {
@@ -11,7 +9,7 @@ export const Header = () => {
       <header className="header">
         <nav className="nav container">
           <a href="index.html" className="nav__logo">
-            Geng
+            My Portfolio
           </a>
 
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
@@ -25,12 +23,6 @@ export const Header = () => {
               <li className="nav__item">
                 <a href="#about" className="nav__link">
                   <i className="uil uil-user nav__icon"></i> About
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#skills" className="nav__link">
-                  <i className="uil uil-file-alt nav__icon"></i> Skills
                 </a>
               </li>
 
