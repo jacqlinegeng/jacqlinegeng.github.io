@@ -18,7 +18,7 @@ const About = () => {
         <Info />
 
         {/* <p className="about__description">I have 4 years of risk advisory experience, and I am well versed in building projects in healthcare, especially in mental health and personal growth.</p> */}
-        <a download="" href={CV} className="button button--flex">Download Resume
+        <a download="" href={CV} className="button button--flex">Download Resumé
         <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
