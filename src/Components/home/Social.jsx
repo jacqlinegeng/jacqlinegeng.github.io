@@ -10,13 +10,7 @@ const Social = () => {
       >
         <i class="uil uil-linkedin-alt"></i>
       </a>
-      <a
-        href="https://github.com/jacqlinegeng"
-        className="home__social-icon"
-        target="_blank"
-      >
-        <i class="uil uil-github-alt"></i>
-      </a>
+
       <a
         href="https://medium.com/@jacqlinegeng"
         className="home__social-icon"
@@ -30,6 +24,13 @@ const Social = () => {
         target="_blank"
       >
         <i class="uil uil-twitter-alt"></i>
+      </a>
+      <a
+        href="https://github.com/jacqlinegeng"
+        className="home__social-icon"
+        target="_blank"
+      >
+        <i class="uil uil-github-alt"></i>
       </a>
       <a
         href="https://linktr.ee/jacqlineee"
