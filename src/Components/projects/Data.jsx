@@ -13,13 +13,15 @@ export const projectsData = [
     title: 'Empowered Healthcare Consumer',
     category: 'app',
     description: 'test test',
+    link: "https://www.empoweredhealthcareconsumer.org/",
   },
   {
     id: 2,
     image: Work2,
-    title: 'The Growth Gradient',
+    title: 'The Growth Gradient Podcast',
     category: 'podcast',
-    description: 'I built this to facilitate honest conversations to explore the complexities of personal and professional development, mental health, and authenticity, aiming to empower the audience to find their purpose, building meaningful connections, and cultivate emotional resilience.'
+    description: 'I created this podcast to facilitate honest conversations about personal and professional development, mental health, and authenticity, aiming to empower the audience to find their purpose, building meaningful connections, and cultivate emotional resilience.',
+    link: "https://open.spotify.com/show/7ADTUMcMgPYCsVizP1CfSx?si=eb62e68ef90e496d",
   },
   {
     id: 3,

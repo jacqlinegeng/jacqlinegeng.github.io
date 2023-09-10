@@ -1,12 +1,17 @@
 import React, { useState }from "react";
 
 const ProjectDetails = ({ item, onClose }) => {
+  const [toggleState, setToggleState] = useState (0);
+
+  const toggleTab = (index) => {
+    setToggleState(index);
+  }
 
   return (
     <div className="project__details">
       <div className="project__details-content">
         {/* Close button */}
-        <i onClick={onClose} className="uil uil-times project__details-close"></i>
+        <i onClick={() => toggleTab(0)} className="uil uil-times project__details-close"></i>
         {/* <button onClick={onClose}></button> */}
         {/* Project details content */}
         <h2 className="project__details-title">{item.title}</h2>
