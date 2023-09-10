@@ -28,26 +28,32 @@ export const projectsData = [
     image: Work3,
     title: 'CureDAO',
     category: 'app',
-    description: 'I was on a mission to build a data ecosystem for cancer research by allowing data peering between databases so that research data can be accessed through a decentralized medium.'
+    description: 'I was on a mission to build a data ecosystem for cancer research by allowing data peering between databases so that research data can be accessed through a decentralized medium.',
+    link: "https://ethglobal.com/showcase/cure-dao-7uo9p",
   },
   {
     id: 4,
     image: Work4,
     title: 'Seen',
     category: 'app',
-    description: ''
+    description: '',
+    link: "https://www.youtube.com/watch?v=RBG7t45sVOc&ab_channel=LinaLanterno",
+    github: "https://github.com/jacqlinegeng/phoenix",
   },
   {
     id: 5,
     image: Work5,
     title: 'Wonder Collective',
     category: 'writing',
+    link: "https://twitter.com/wdnrcollective",
   },
   {
     id: 6,
     image: Work6,
     title: 'Solana Secret Portal',
     category: 'app',
+    link: "https://secret-portal.vercel.app/",
+    github: "https://github.com/jacqlinegeng/solana-secret-portal",
   },
 ];
 
