@@ -52,6 +52,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
+  background-color: var(--mb-1);
 }
 
 .work__button-icon {
