@@ -1,0 +1,14 @@
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: var(--container-color); /* Light text color */
+}
+
+.dark-sun {
+  background-color: #333; /* Same as the background color */
+    border-color: none;
+    color: #fff;
+}
+
+.dark-moon {
+  background-color: var(--body-color);
+}

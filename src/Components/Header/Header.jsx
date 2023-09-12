@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import DarkMode from "../darkmode/DarkMode";
 
 export const Header = () => {
   /* Toggle Menu */
@@ -11,6 +12,7 @@ export const Header = () => {
           <a href="index.html" className="nav__logo">
             My Portfolio
           </a>
+
 
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
@@ -32,11 +34,7 @@ export const Header = () => {
                 </a>
               </li>
 
-              {/* <li className="nav__item">
-                <a href="#contact" className="nav__link">
-                  <i className="uil uil-message nav__icon"></i> Contact
-                </a>
-              </li> */}
+              <DarkMode />
             </ul>
 
             <i
