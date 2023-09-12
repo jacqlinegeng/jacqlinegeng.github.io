@@ -12,7 +12,7 @@ export const projectsData = [
     image: Work1,
     title: 'Empowered Healthcare Consumer',
     category: 'app',
-    description: 'test test',
+    description: 'As part of my passion in healthcare and healthtech, I co-created this app to empower individual patients and heatlhcare consumers by offering price transparency in the American healthcare system.',
     link: "https://www.empoweredhealthcareconsumer.org/",
   },
   {
@@ -36,7 +36,7 @@ export const projectsData = [
     image: Work4,
     title: 'Seen',
     category: 'app',
-    description: '',
+    description: 'I worked on this app to help build a blockchain solution for domestic violence survivors by creating a reporting platform that can record, store, and share evidence to enhance the privacy and integrity of the submission process.',
     link: "https://www.youtube.com/watch?v=RBG7t45sVOc&ab_channel=LinaLanterno",
     github: "https://github.com/jacqlinegeng/phoenix",
   },
@@ -45,6 +45,7 @@ export const projectsData = [
     image: Work5,
     title: 'Wonder Collective',
     category: 'writing',
+    description: 'I made this Twitter page as a creative expression of insights, self-discovery, and storytelling as vehicles for self-exploration and growth',
     link: "https://twitter.com/wdnrcollective",
   },
   {
@@ -52,6 +53,7 @@ export const projectsData = [
     image: Work6,
     title: 'Solana Secret Portal',
     category: 'app',
+    description: 'This is a web3 dApp built on Solana to create a safe space for people to store their deepest and darkest secrets (currently desktop-friendly only).',
     link: "https://secret-portal.vercel.app/",
     github: "https://github.com/jacqlinegeng/solana-secret-portal",
   },
