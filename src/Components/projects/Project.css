@@ -21,12 +21,17 @@
 }
 
 .dark-mode .work__item {
-    color:#333;
+    color:#fff;
 }
 
 .dark-mode .work__item:hover {
     background-color: #fff;
     color: #333;
+}
+
+.dark-mode .active-work {
+  background-color: #fff;
+  color: #333;
 }
 
 .work__container {
