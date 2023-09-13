@@ -8,7 +8,7 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
       >
-        <i class="uil uil-linkedin-alt"></i>
+        <i className="uil uil-linkedin-alt"></i>
       </a>
 
       <a
@@ -16,28 +16,28 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
       >
-        <i class="uil uil-notebooks"></i>
+        <i className="uil uil-notebooks"></i>
       </a>
       <a
         href="https://twitter.com/inthecosmicdust"
         className="home__social-icon"
         target="_blank"
       >
-        <i class="uil uil-twitter-alt"></i>
+        <i className="uil uil-twitter-alt"></i>
       </a>
       <a
         href="https://github.com/jacqlinegeng"
         className="home__social-icon"
         target="_blank"
       >
-        <i class="uil uil-github-alt"></i>
+        <i className="uil uil-github-alt"></i>
       </a>
       <a
         href="https://linktr.ee/jacqlineee"
         className="home__social-icon"
         target="_blank"
       >
-        <i class="uil uil-link-alt"></i>
+        <i className="uil uil-link-alt"></i>
       </a>
     </div>
   );

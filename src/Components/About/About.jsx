@@ -20,7 +20,7 @@ const About = () => {
         {/* <p className="about__description">I have 4 years of risk advisory experience, and I am well versed in building projects in healthcare, especially in mental health and personal growth.</p> */}
         <a download="" href={CV} className="button button--flex">Download Resumé
         <svg
-                class="button__icon"
+                className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"

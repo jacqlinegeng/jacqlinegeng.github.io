@@ -13,7 +13,7 @@ const ProjectDetails = ({ item, onClose }) => {
         <p className="project__details-description">{item.description}</p>
 
         <ul className="project__details-info">
-          <i class="uil uil-corner-down-right-alt project__details-icon"></i>
+          <i className="uil uil-corner-down-right-alt project__details-icon"></i>
           <p className="project__details-link">
             Check out this project {" "}
             <a href={item.link} className="project__details-hyperlink" target="_blank" rel="noopener noreferrer">
