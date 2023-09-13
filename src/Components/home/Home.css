@@ -82,12 +82,25 @@
   .home__title,
   .home__subtitle,
   .home__description,
+  .home__social-icon,
   .home__scroll-name {
     color: #fff;
   }
   
 }
 
+.dark-mode .button--flex {
+    background-color: #fff;
+    color: #333;
+}
+
+.home__scroll-mouse {
+  stroke: var(--title-color);
+}
+
+.dark-mode .home__scroll-mouse {
+  stroke: #fff;
+}
 
 @keyframes profile__animate {
   0% {
@@ -132,6 +145,10 @@
 .home__scroll-arrow {
   font-size: 1.25rem;
   color: var(--title-color);
+}
+
+.dark-mode .home__scroll-arrow {
+  color: #fff;
 }
 
 /* breakpoints */

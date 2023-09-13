@@ -39,9 +39,17 @@
   font-size: var(--tiny-font-size);
 }
 
+.dark-mode .about__subtitle {
+  color: #333;
+}
+
 .about__description {
   padding: 0.4rem 0 0;
   margin-bottom: var(--mb-2-5);
+}
+
+.dark-mode .section__title {
+  color: #fff;
 }
 
 /* breakpoints */

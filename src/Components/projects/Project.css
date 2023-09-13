@@ -20,6 +20,15 @@
   color: var(--container-color);
 }
 
+.dark-mode .work__item {
+    color:#333;
+}
+
+.dark-mode .work__item:hover {
+    background-color: #fff;
+    color: #333;
+}
+
 .work__container {
   display: grid;
   grid-template-columns: repeat(2, max-content);
@@ -136,6 +145,13 @@
   text-decoration: underline;
   font-weight: bold;
 }
+
+.dark-mode {
+  .project__details-description,
+  .project__details-link {
+    color: #333;
+  }
+}  
 
 /* active project details */
 .active-details {

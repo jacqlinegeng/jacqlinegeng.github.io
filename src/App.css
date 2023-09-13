@@ -158,9 +158,19 @@ img {
 
 .button__icon {
   margin-left: var(--mb-0-5);
+  fill: var(--container-color); 
+}
+
+.dark-mode .button__icon {
+  fill: #333;
 }
 
 .button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--scroll {
   display: inline-flex;
   align-items: center;
 }
