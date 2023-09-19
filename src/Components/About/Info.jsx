@@ -6,7 +6,7 @@ const Info = () => {
       <div className="about__box">
       <i className="uil uil-award about__icon"></i>
         <h3 className="about__title">Background</h3>
-        <span className="about__subtitle">Currently @ Deloitte OMNIA AI, previously thirdweb (blockchain startup). Exploring everything in healthtech + AI</span>
+        <span className="about__subtitle">Currently @ Deloitte, previously thirdweb (blockchain startup). Exploring everything in healthtech + AI</span>
       </div>
 
       <div className="about__box">
