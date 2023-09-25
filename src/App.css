@@ -123,9 +123,14 @@ img {
   margin-bottom: 4rem;
 }
 
+
 .section__title,
 .section__subtitle {
   text-align: center;
+}
+
+.dark-mode .section__subtitle {
+  color: #fff;
 }
 
 /* layout */

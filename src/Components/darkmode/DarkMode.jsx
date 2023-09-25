@@ -16,7 +16,7 @@ const DarkMode = () => {
   }
 
   return (
-    <nav className={`navbar ${isDarkMode ? "dark-mode" : ""}`}>
+    <nav className={`navbar ${isDarkMode ? "light-mode" : "dark-mode"}`}>
       <button className="dark-button" onClick={toggleDarkMode}>
         {isDarkMode ? <i className="uil uil-moon dark-moon"></i> : <i className="uil uil-sun dark-sun"></i>}
       </button>
