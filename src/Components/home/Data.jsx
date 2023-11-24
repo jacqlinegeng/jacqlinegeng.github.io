@@ -55,7 +55,7 @@ const Data = () => {
           ></path>
         </svg>
       </h1>
-      <h3 className="home__subtitle">Human-Centric Consultant, CPA</h3>
+      <h3 className="home__subtitle">A Human-centric Consultant</h3>
       <p className="home__description">I am a consultant based in Toronto, and I am very passionate about building solutions in the intersection of technology and healthcare, using the power of AI.</p>
       <a href="mailto: jacqlinegeng@gmail.com" className="button button--flex">
         say hello
