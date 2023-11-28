@@ -46,7 +46,7 @@ export const projectsData = [
     title: 'Wonder Collective',
     category: 'writing',
     description: 'I made this Twitter page as a creative expression of insights, self-discovery, and storytelling as vehicles for self-exploration and growth',
-    link: "https://twitter.com/wdnrcollective",
+    link: "https://twitter.com/wondrcollective",
   },
   {
     id: 6,
