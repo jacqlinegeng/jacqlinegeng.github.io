@@ -12,12 +12,17 @@ const About = () => {
     <span className="section__subtitle">"What you do makes a difference, and you have to decide what kind of difference you want to make." ˜ Jane Goodall</span>
 
     <div className="about__container container grid">
+      
       <img src={AboutImg} alt="" className="about__img" />
+      
+      
 
       <div className="about__data">
+      
         <Info />
 
         {/* <p className="about__description">I have 4 years of risk advisory experience, and I am well versed in building projects in healthcare, especially in mental health and personal growth.</p> */}
+        
         <a download="" href={CV} className="button button--flex">Download Resumé
         <svg
                 className="button__icon"
@@ -44,8 +49,20 @@ const About = () => {
                   // fill="var(--container-color)"
                 ></path>
               </svg>
+              
         </a>
+        
       </div>
+      <iframe
+        style={{border: '12px'}}
+        src="https://open.spotify.com/embed/playlist/6QF6lbpdaWdZyjdfAuiPrc?utm_source=generator&theme=0"
+        width="220%"
+        height="352"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+
     </div>
   </section>
   );
