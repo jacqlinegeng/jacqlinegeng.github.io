@@ -15,7 +15,7 @@ const About = () => {
       
       <img src={AboutImg} alt="" className="about__img" />
       
-      
+
 
       <div className="about__data">
       
