@@ -5,11 +5,14 @@
 
 .home__content {
   grid-template-columns: 500px repeat(1, 1fr);
-  column-gap: 10rem;
+  column-gap: 15rem;
   align-items: center;
   margin-left: 9.25rem;
 }
 
+.home__data {
+  width: 700px;
+}
 
 .home__social {
   display: grid;
@@ -64,7 +67,7 @@
 
 
 .home__spacing {
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-2);
 
 }
 
