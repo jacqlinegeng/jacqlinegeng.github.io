@@ -13,11 +13,12 @@
 }
 
 .nav {
+  transform: translateX(150px);
   height: calc(var(--header-height) + 1.5rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 5rem;
 }
 
 .nav__logo,

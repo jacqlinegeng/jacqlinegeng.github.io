@@ -9,28 +9,27 @@ export const Header = () => {
     <div>
       <header className="header">
         <nav className="nav container">
-          <a href="index.html" className="nav__logo">
+          {/* <a href="index.html" className="nav__logo">
             My Portfolio
-          </a>
-
+          </a> */}
 
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
-              <li className="nav__item">
+              {/* <li className="nav__item">
                 <a href="#home" className="nav__link active-link">
                   <i className="uil uil-estate nav__icon"></i> home
                 </a>
-              </li>
+              </li> */}
 
               <li className="nav__item">
                 <a href="#about" className="nav__link">
-                  <i className="uil uil-user nav__icon"></i> about
+                  <i className="uil uil-user nav__icon"></i> ABOUT
                 </a>
               </li>
 
               <li className="nav__item">
                 <a href="#projects" className="nav__link">
-                  <i className="uil uil-folder-heart nav__icon"></i> projects
+                  <i className="uil uil-folder-heart nav__icon"></i> PROJECTS
                 </a>
               </li>
 
