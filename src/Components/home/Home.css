@@ -4,10 +4,10 @@
 
 
 .home__content {
-  grid-template-columns: 116px repeat(2, 1fr);
-  padding-top: 1rem;
-  column-gap: 2rem;
+  grid-template-columns: 500px repeat(1, 1fr);
+  column-gap: 10rem;
   align-items: center;
+  margin-left: 9.25rem;
 }
 
 
@@ -34,8 +34,8 @@
   font-size: var(--h1-font-size);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--mb-0-25);
+  margin-bottom: var(--mb-2);
+  column-gap: 3rem;
 }
 
 .home__hand {
@@ -62,9 +62,6 @@
   top: 1rem;
 }
 
-.home__description {
-  max-width: 400px;
-}
 
 .home__spacing {
   margin-bottom: var(--mb-1);
