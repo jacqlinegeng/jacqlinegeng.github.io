@@ -7,11 +7,34 @@ const Data = () => {
         Jacqline Geng
         <div className="home__img"></div>
       </h1>
-      {/* <h3 className="home__subtitle">A Human-centric Consultant</h3> */}
+      <p className="home__spacing">
       <p className="home__description">
         I build and explore everything about the human connection and human
         consciousness.
       </p>
+      </p>
+      <p className="home__spacing">
+      <p className="home__description">My ethos:</p>
+      <p className="home__description">
+        learn at a high velocity - speed and direction both matter
+      </p>
+      <p className="home__description">fail fast, then reflect and grow</p>
+      <p className="home__description">
+        don't compare; everyone was dealt a different set of cards, so focus on
+        your own hand
+      </p>
+      <p className="home__description">
+        optimize for the experience, not the outcome
+      </p>
+      <p className="home__description">
+        keep a beginner's mindset and stay humble
+      </p>
+      <p className="home__description">
+        life is an adventure, and love is a conscious choice
+      </p>
+      <p className="home__description">be exotic, be iconic!</p>
+      </p>
+      <p className="home__spacing">
       <p className="home__description">
         I am a senior consultant at Deloitte. I am working on my podcast about
         personal growth and my healthcare project in demystifying medical bills
@@ -22,10 +45,12 @@ const Data = () => {
         business and information systems. I self-taught coding, blockchain
         development, and psychology.
       </p>
+      </p>
+      <p className="home__spacing">
       <p className="home__description">
         I dance, DJ, vlog, snowboard, and write for fun.
       </p>
-
+      </p>
     </div>
   );
 };
