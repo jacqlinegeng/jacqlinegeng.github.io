@@ -14,14 +14,10 @@ const About = () => {
     <div className="about__container container grid">
       
       <img src={AboutImg} alt="" className="about__img" />
-      
-
-
+    
       <div className="about__data">
       
         <Info />
-
-        {/* <p className="about__description">I have 4 years of risk advisory experience, and I am well versed in building projects in healthcare, especially in mental health and personal growth.</p> */}
         
         <a download="" href={CV} className="button button--flex">Download Resumé
         <svg
