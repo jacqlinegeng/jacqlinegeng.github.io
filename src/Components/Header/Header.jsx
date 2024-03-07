@@ -9,18 +9,9 @@ export const Header = () => {
     <div>
       <header className="header">
         <nav className="nav container">
-          {/* <a href="index.html" className="nav__logo">
-            My Portfolio
-          </a> */}
 
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
-              {/* <li className="nav__item">
-                <a href="#home" className="nav__link active-link">
-                  <i className="uil uil-estate nav__icon"></i> home
-                </a>
-              </li> */}
-
               <li className="nav__item">
                 <a href="#about" className="nav__link">
                   <i className="uil uil-user nav__icon"></i> ABOUT
