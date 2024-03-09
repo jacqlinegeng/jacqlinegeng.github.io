@@ -56,6 +56,22 @@ const Data = () => {
           I am always looking for something new, let's be friends!{" "}
         </p>
       </p>
+      <p className="home__spacing">
+        <p className="home__description">
+        "What you do makes a difference, and you have to decide what kind of difference you want to make." ˜ Jane Goodall
+        </p>
+      </p>
+      <p className="spotify__playlist">
+      <iframe
+          style={{ border: "10px" }}
+          src="https://open.spotify.com/embed/playlist/6QF6lbpdaWdZyjdfAuiPrc?utm_source=generator&theme=0"
+          width="60%"
+          height="100"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </p>
     </div>
   );
 };
