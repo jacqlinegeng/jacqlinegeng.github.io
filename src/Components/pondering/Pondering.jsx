@@ -2,7 +2,8 @@ import React from "react";
 
 const Pondering = () => {
   return (
-  <div></div>
+    <section className="" id='pondering'>
+  </section>
     );
 };
 
