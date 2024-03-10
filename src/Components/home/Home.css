@@ -76,6 +76,29 @@
   align-items: center;
 }
 
+.animated__link {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated__link:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(234, 237, 83); 
+  visibility: visible; 
+  transform: scaleX(1);
+  transition: visibility 0s, transform 0.3s ease-in-out;
+}
+
+.animated__link:hover:before {
+  visibility: visible;
+  transform: scaleX(0);
+}
+
 .home__img {
   background: url(../../assets/profile-pic.png);
   background-repeat: no-repeat;

@@ -12,6 +12,7 @@ const Data = () => {
         <a
           href="https://www.linkedin.com/posts/luzhangvc_artificialintelligence-humanconsciousness-activity-7133860301438951425-DLmz?utm_source=share&utm_medium=member_desktop
 "
+          className="animated__link"
         >
           human connection
         </a>{" "}
@@ -19,6 +20,7 @@ const Data = () => {
         <a
           href="https://www.oprah.com/own-podcasts/the-purpose-of-your-life-is-becoming-conscious
 "
+          className="animated__link"
         >
           human consciousness
         </a>
