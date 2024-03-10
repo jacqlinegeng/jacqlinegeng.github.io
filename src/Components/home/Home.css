@@ -126,7 +126,9 @@
   .home__subtitle,
   .home__description,
   .home__social-icon,
-  .home__scroll-name {
+  .home__scroll-name,
+  .home__quote,
+  .animated__link {
     color: #fff;
   }
   
