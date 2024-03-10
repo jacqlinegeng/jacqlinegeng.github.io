@@ -77,7 +77,7 @@ const Data = () => {
           loading="lazy"
         ></iframe>
       </p>
-      <p className="home__description">
+      <p className="home__quote">
         "What you do makes a difference, and you have to decide what kind of
         difference you want to make." ˜ Jane Goodall
       </p>

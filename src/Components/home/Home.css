@@ -18,6 +18,7 @@
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .home__social-icon {
@@ -50,6 +51,12 @@
 .home__description {
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
+}
+
+.home__quote {
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-1);
+  width: 800px;
 }
 
 .home__subtitle {
