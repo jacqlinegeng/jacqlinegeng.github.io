@@ -9,8 +9,21 @@ const Data = () => {
       </h1>
       <p className="home__spacing">
         <p className="home__description">
-          I build and explore everything about the human connection and human
-          consciousness.
+          I build and explore everything about the{" "}
+          <a
+            href="https://www.linkedin.com/posts/luzhangvc_artificialintelligence-humanconsciousness-activity-7133860301438951425-DLmz?utm_source=share&utm_medium=member_desktop
+"
+          >
+            human connection
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.oprah.com/own-podcasts/the-purpose-of-your-life-is-becoming-conscious
+"
+          >
+            human consciousness
+          </a>
+          .
         </p>
       </p>
       <p className="home__spacing">
@@ -53,16 +66,23 @@ const Data = () => {
       </p>
       <p className="home__spacing">
         <p className="home__description">
-          I am always looking for something new, let's be friends!{" "}
+          I am always looking for something new, let's be{" "}
+          <a
+            href="https://linktr.ee/jacqlineee
+"
+          >
+            friends!
+          </a>{" "}
         </p>
       </p>
       <p className="home__spacing">
         <p className="home__description">
-        "What you do makes a difference, and you have to decide what kind of difference you want to make." ˜ Jane Goodall
+          "What you do makes a difference, and you have to decide what kind of
+          difference you want to make." ˜ Jane Goodall
         </p>
       </p>
       <p className="spotify__playlist">
-      <iframe
+        <iframe
           style={{ border: "10px" }}
           src="https://open.spotify.com/embed/playlist/6QF6lbpdaWdZyjdfAuiPrc?utm_source=generator&theme=0"
           width="60%"
