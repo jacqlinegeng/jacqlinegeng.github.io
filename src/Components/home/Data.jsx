@@ -68,6 +68,7 @@ const Data = () => {
 
       <p className="spotify__playlist">
         <iframe
+          title="spotify"
           style={{ border: "10px" }}
           src="https://open.spotify.com/embed/playlist/6QF6lbpdaWdZyjdfAuiPrc?utm_source=generator&theme=0"
           width="60%"

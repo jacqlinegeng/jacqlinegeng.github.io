@@ -15,6 +15,7 @@ const Social = () => {
         href="https://medium.com/@jacqlinegeng"
         className="home__social-icon"
         target="_blank"
+        rel="noreferrer"
       >
         <i className="uil uil-notebooks"></i>
       </a>
