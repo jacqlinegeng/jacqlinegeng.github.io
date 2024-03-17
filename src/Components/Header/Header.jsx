@@ -37,7 +37,9 @@ export const Header = () => {
                 </a>
               </li>
 
+              <li className="nav__darkmode">
               <DarkMode />
+              </li>
             </ul>
 
             <i
