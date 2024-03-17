@@ -61,6 +61,7 @@ const Data = () => {
         <a
           href="https://linktr.ee/jacqlineee
 "
+          className="animated__link"
         >
           friends!
         </a>{" "}

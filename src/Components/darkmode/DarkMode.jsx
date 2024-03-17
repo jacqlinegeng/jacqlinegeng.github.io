@@ -6,8 +6,15 @@ const DarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+    setIsDarkMode(!isDarkMode);
+    // You can save the dark mode preference in local storage or a state management solution like Redux
   };
+
+  if (!isDarkMode) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
 
   return (
     <nav className={`navbar ${isDarkMode ? "light-mode" : "dark-mode"}`}>
