@@ -8,12 +8,12 @@ import DarkMode from "./Components/darkmode/DarkMode";
 import Pondering from "./Components/pondering/Pondering";
 
 const App = () => {
+
   return (
     <>
       <Header />
 
       <main className="main">
-        <DarkMode />
         <Home />
         <About />
         <Project />
