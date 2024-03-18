@@ -1,6 +1,6 @@
 import React from "react";
 
-const Social = () => {
+const Footer = () => {
   return (
     <div className="footer">
       <p>jacqline geng © 2024</p>
@@ -8,4 +8,4 @@ const Social = () => {
   );
 };
 
-export default Social;
+export default Footer;
