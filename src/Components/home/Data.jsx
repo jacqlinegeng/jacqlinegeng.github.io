@@ -53,7 +53,15 @@ const Data = () => {
       </p>
 
       <p className="home__description">
-        I dance, DJ, vlog, snowboard, and write for fun.
+        I dance, DJ, <a
+          href="https://www.youtube.com/@jacqline
+"
+          className="animated__link"
+        >vlog</a>, snowboard, and <a
+        href="https://substack.com/@jacqline
+"
+        className="animated__link"
+      >write</a> for fun.
       </p>
 
       <p className="home__description">
