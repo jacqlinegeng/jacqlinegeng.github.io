@@ -124,7 +124,7 @@
   justify-self: center;
   width: 150px;
   height: 150px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   animation: profile__animate 8s ease-in-out infinite 1s;
 }
 
