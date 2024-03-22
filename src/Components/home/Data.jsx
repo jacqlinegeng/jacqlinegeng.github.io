@@ -45,8 +45,8 @@ const Data = () => {
         I am a senior consultant at Deloitte. I am working on my podcast about
         personal growth and my healthcare project in demystifying medical bills
         using LLM. Currently I'm interested in neurotech, mental health, venture
-        capital, longevity, psychedelic therapy, creative writing, and
-        electronic music production. Previously, I shipped developer
+        capital, longevity, psychedelics therapy, creative writing, and
+        electronic music production. Previously, I developed technical
         documentation and curated the developer community at thirdweb. I have a
         background in business and information systems. I self-taught coding,
         blockchain development, and psychology.
