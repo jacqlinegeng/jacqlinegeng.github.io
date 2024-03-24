@@ -8,33 +8,17 @@ const About = () => {
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>
-      <p className="spotify__playlist">
-        <iframe
-          title="spotify"
-          style={{ border: "10px" }}
-          src="https://open.spotify.com/embed/playlist/6QF6lbpdaWdZyjdfAuiPrc?utm_source=generator&theme=0"
-          width="60%"
-          height="100"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </p>
+
       <span className="section__subtitle">
         "What you do makes a difference, and you have to decide what kind of
         difference you want to make." ˜ Jane Goodall
       </span>
 
-
       <div className="about__container container grid">
-        
         <img src={AboutImg} alt="" className="about__img" />
 
-
         <div className="about__data">
-          
           <Info />
-
 
           <a download="" href={CV} className="button button--flex">
             Download Resumé
@@ -63,13 +47,9 @@ const About = () => {
                 // fill="var(--container-color)"
               ></path>
             </svg>
-            
           </a>
-          
         </div>
-        
       </div>
-      
     </section>
   );
 };
