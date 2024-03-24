@@ -74,8 +74,7 @@ const Data = () => {
           friends!
         </a>{" "}
       </p>
-
-      <p className="spotify__playlist">
+      {/* <p className="spotify__playlist">
         <iframe
           title="spotify"
           style={{ border: "10px" }}
@@ -86,7 +85,8 @@ const Data = () => {
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
-      </p>
+      </p> */}
+      
       <p className="home__quote">
         "What you do makes a difference, and you have to decide what kind of
         difference you want to make." ˜ Jane Goodall
