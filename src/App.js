@@ -16,7 +16,7 @@ const App = () => {
 
       <main className="main">
         <Home />
-        <About />
+        {/* <About /> */}
         <Project />
         <Writing />
         <Pondering />
