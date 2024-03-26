@@ -13,7 +13,7 @@ const Home = () => {
           <Data />
           <Social />
         </div>
-        <ScrollDown />
+        {/* <ScrollDown /> */}
       </div>
       <Footer />
     </section>
