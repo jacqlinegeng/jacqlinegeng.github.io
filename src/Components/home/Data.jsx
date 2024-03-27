@@ -30,7 +30,7 @@ const Data = () => {
       <p className="home__description">
         <p>My ethos:</p>
         <p>- learn at a high velocity - speed and direction both matter</p>
-        <p>- fail fast, then reflect and grow</p>
+        <p>- fail fast, learn faster</p>
         <p>
           - don't compare; everyone was dealt a different set of cards, so focus
           on your own hand
