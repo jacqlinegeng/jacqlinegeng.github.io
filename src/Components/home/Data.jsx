@@ -36,17 +36,17 @@ const Data = () => {
           on your own hand
         </p>
         <p>- optimize for the experience, not the outcome</p>
-        <p>- keep a beginner's mindset and stay humble</p>
+        <p>- maintain a beginner's mindset and stay humble</p>
         <p>- life is an adventure, and love is a conscious choice</p>
         <p>- be exotic, be iconic!</p>
       </p>
 
       <p className="home__description">
-        I am a senior consultant at Deloitte. I am working on my podcast about
+        During my 9-5, I am a senior consultant at Deloitte. In my 5-9, I am usually found working on my podcast about
         personal growth and my healthcare project in demystifying medical bills
         using LLM. Currently I'm interested in neurotech, mental health, venture
         capital, longevity, psychedelics therapy, creative writing, and
-        electronic music production. Previously, I developed technical
+        electronic music production. Previously, I crafted technical
         documentation and curated the developer community at thirdweb. I have a
         background in business and information systems. I self-taught coding,
         blockchain development, and psychology.
