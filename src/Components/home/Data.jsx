@@ -36,7 +36,7 @@ const Data = () => {
           on your own hand
         </p>
         <p>- optimize for the experience, not the outcome</p>
-        <p>- maintain a beginner's mindset and stay humble</p>
+        <p>- maintain a beginner's mindset and embrace humility</p>
         <p>- life is an adventure, and love is a conscious choice</p>
         <p>- be exotic, be iconic!</p>
       </p>
