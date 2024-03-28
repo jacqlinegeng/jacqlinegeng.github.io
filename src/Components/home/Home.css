@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .home__social-icon {
