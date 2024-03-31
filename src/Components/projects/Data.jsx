@@ -53,7 +53,7 @@ export const projectsData = [
     image: Work6,
     title: 'Solana Secret Portal',
     category: 'app',
-    description: 'This is a web3 dApp built on Solana to create a safe space for people to store their deepest and darkest secrets (currently desktop-friendly only).',
+    description: 'This is a web3 dApp built on Solana to create a safe space for people to store their deepest and darkest secrets (currently only desktop-friendly).',
     link: "https://secret-portal.vercel.app/",
     github: "https://github.com/jacqlinegeng/solana-secret-portal",
   },
