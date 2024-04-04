@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import DarkMode from "../darkmode/DarkMode";
 
 export const Header = () => {
@@ -10,15 +10,8 @@ export const Header = () => {
     <div>
       <header className="header">
         <nav className="nav container">
-
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
-              {/* <li className="nav__item">
-                <a href="#about" className="nav__link">
-                  <i className="uil uil-user nav__icon"></i> ABOUT
-                </a>
-              </li> */}
-
               <li className="nav__item">
                 <a href="#projects" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> PROJECTS
@@ -26,20 +19,19 @@ export const Header = () => {
               </li>
 
               <li className="nav__item">
-                <Link to="#writing" className="nav__link">
+                <Link to="/writing" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> WRITING
                 </Link>
               </li>
 
-
               <li className="nav__item">
-              <Link to="#pondering" className="nav__link">
+                <Link to="/pondering" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> PONDERING
                 </Link>
               </li>
 
               <li className="nav__darkmode">
-              <DarkMode />
+                <DarkMode />
               </li>
             </ul>
 

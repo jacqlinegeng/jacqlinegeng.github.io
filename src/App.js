@@ -19,11 +19,12 @@ const App = () => {
         <Home />
         {/* <About /> */}
         {/* <Project /> */}
-        <Writing />
+        {/* <Writing /> */}
         
         <Routes> {/* Wrap your Routes */}
+        <Route path="/writing" element={<Writing />} />
         <Route path="/pondering" element={<Pondering />} /> {/* Define route with 'element' prop */}
-        {/* Other routes */}
+        <Route path="/" element={<Home />} /> 
       </Routes>
         
         {/* <Pondering /> */}
