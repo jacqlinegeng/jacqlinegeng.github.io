@@ -4,7 +4,7 @@ const Pondering = () => {
   return (
     <section className="" id="pondering">
       <p>Currently listening</p>
-      {/* <p className="spotify__playlist">
+      <p className="spotify__playlist">
         <iframe
           title="spotify"
           style={{ border: "10px" }}
@@ -15,7 +15,7 @@ const Pondering = () => {
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
-      </p> */}
+      </p>
     </section>
   );
 };
