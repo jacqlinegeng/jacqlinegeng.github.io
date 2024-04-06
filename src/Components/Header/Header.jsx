@@ -13,7 +13,7 @@ export const Header = () => {
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
               <li className="nav__item">
-                <a href="#projects" className="nav__link">
+                <a href="/project" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> PROJECTS
                 </a>
               </li>

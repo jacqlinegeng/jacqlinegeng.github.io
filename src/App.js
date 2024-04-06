@@ -17,10 +17,6 @@ const App = () => {
 
       <main className="main">
         <Home />
-        {/* <About /> */}
-        {/* <Project /> */}
-        {/* <Writing /> */}
-        
         <Routes> {/* Wrap your Routes */}
         <Route path="/project" element={<Project />} />
         <Route path="/writing" element={<Writing />} />
