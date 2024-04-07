@@ -33,6 +33,12 @@ export const Header = () => {
               <li className="nav__darkmode">
                 <DarkMode />
               </li>
+
+              <li className="nav__name">
+                <Link to="/" className="nav__link">
+                  <i className="uil uil-folder-heart nav__icon"></i> JACQLINE GENG
+                </Link>
+              </li>
             </ul>
 
             <i
