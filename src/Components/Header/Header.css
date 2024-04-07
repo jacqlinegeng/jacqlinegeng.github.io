@@ -45,6 +45,14 @@
   transition: 0.3s;
 }
 
+.nav__name {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 0.20rem;
+  margin-left: auto;
+}
+
 .nav__darkmode {
   display: flex;
   flex-direction: column;
