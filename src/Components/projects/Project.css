@@ -96,6 +96,12 @@
   transition: 0.3s;
 }
 
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-top: 1rem;
+}
+
 .project__details-content {
   width: 500px;
   position: relative;
