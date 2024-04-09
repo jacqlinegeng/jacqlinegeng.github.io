@@ -2,7 +2,7 @@ import React from "react";
 
 const Pondering = () => {
   return (
-    <section className="" id="pondering">
+    <section className="pondering__container" id="pondering">
       <p>Currently listening</p>
       <p className="spotify__playlist">
         <iframe

@@ -19,7 +19,6 @@ const App = () => {
         <Routes> {/* Wrap your Routes */}
         <Route path="/project" element={<Project />} />
         <Route path="/writing" element={<Writing />} />
-        <Route path="/pondering" element={<Pondering />} /> {/* Define route with 'element' prop */}
         <Route path="/" element={<Home />} /> 
       </Routes>
         
