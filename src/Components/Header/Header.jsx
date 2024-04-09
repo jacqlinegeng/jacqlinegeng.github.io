@@ -13,8 +13,8 @@ export const Header = () => {
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
               <li className="nav__item">
-                <a href="/project" className="nav__link">
-                  <i className="uil uil-folder-heart nav__icon"></i> PROJECTS
+                <a href="/pondering" className="nav__link">
+                  <i className="uil uil-folder-heart nav__icon"></i> PONDERING
                 </a>
               </li>
 
@@ -24,19 +24,13 @@ export const Header = () => {
                 </Link>
               </li>
 
-              <li className="nav__item">
-                <Link to="/pondering" className="nav__link">
-                  <i className="uil uil-folder-heart nav__icon"></i> PONDERING
-                </Link>
-              </li>
-
               <li className="nav__darkmode">
                 <DarkMode />
               </li>
 
               <li className="nav__name">
                 <Link to="/" className="nav__link">
-                  <i className="uil uil-folder-heart nav__icon"></i> JACQLINE GENG
+                  <i className="uil uil-folder-heart nav__icon"></i> JG
                 </Link>
               </li>
             </ul>

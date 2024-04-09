@@ -7,7 +7,6 @@ import About from "./Components/about/About";
 import Project from "./Components/projects/Project";
 import DarkMode from "./Components/darkmode/DarkMode";
 import Writing from "./Components/writing/Writing";
-import Pondering from "./Components/pondering/Pondering";
 
 const App = () => {
 
@@ -17,12 +16,11 @@ const App = () => {
 
       <main className="main">
         <Routes> {/* Wrap your Routes */}
-        <Route path="/project" element={<Project />} />
+        <Route path="/pondering" element={<Project />} />
         <Route path="/writing" element={<Writing />} />
         <Route path="/" element={<Home />} /> 
       </Routes>
         
-        {/* <Pondering /> */}
       </main>
     </Router>
   );
