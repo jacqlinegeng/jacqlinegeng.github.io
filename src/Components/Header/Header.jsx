@@ -17,12 +17,12 @@ export const Header = () => {
                   <i className="uil uil-folder-heart nav__icon"></i> PONDERING
                 </a>
               </li>
-
+{/* 
               <li className="nav__item">
                 <Link to="/writing" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> WRITING
                 </Link>
-              </li>
+              </li> */}
 
               <li className="nav__darkmode">
                 <DarkMode />

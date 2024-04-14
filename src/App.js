@@ -17,7 +17,7 @@ const App = () => {
       <main className="main">
         <Routes> {/* Wrap your Routes */}
         <Route path="/pondering" element={<Project />} />
-        <Route path="/writing" element={<Writing />} />
+        {/* <Route path="/writing" element={<Writing />} /> */}
         <Route path="/" element={<Home />} /> 
       </Routes>
         
