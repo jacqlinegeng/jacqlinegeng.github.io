@@ -42,7 +42,7 @@ const Data = () => {
       </p>
 
       <p className="home__description">
-        During my 9-5, I am a senior consultant at Deloitte. In my 5-9, I am usually found working on my podcast about
+        During my 9-5, I am a senior consultant at <a href="https://www2.deloitte.com/ca">Deloitte</a>. In my 5-9, I am usually found working on my podcast about
         personal growth and my healthcare project in demystifying medical bills
         using LLM. Currently I'm interested in neurotech, mental health, venture
         capital, longevity, psychedelics therapy, creative writing, and
