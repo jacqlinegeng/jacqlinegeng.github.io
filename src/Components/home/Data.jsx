@@ -47,7 +47,7 @@ const Data = () => {
         using LLM. Currently I'm interested in neurotech, mental health, venture
         capital, longevity, psychedelics therapy, creative writing, and
         electronic music production. Previously, I crafted technical
-        documentation and curated the developer community at thirdweb. I have a
+        documentation and curated the developer community at <a href="https://thirdweb.com/">thirdweb</a>. I have a
         background in business and information systems. I self-taught coding,
         blockchain development, and psychology.
       </p>
