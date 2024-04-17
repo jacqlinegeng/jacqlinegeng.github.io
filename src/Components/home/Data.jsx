@@ -31,14 +31,13 @@ const Data = () => {
         <p>My ethos:</p>
         <p>‣ learn at a high velocity; speed and direction both matter</p>
         <p>‣ fail fast, learn faster</p>
-        <p>
-          - don't compare; everyone was dealt a different set of cards, so focus
+        <p>‣ don't compare; everyone was dealt a different set of cards, so focus
           on your own hand
         </p>
-        <p>- optimize for the experience, not the outcome</p>
-        <p>- maintain a beginner's mindset and embrace humility</p>
-        <p>- life is an adventure, and love is a conscious choice</p>
-        <p>- be exotic, be iconic!</p>
+        <p>‣ optimize for the experience, not the outcome</p>
+        <p>‣ maintain a beginner's mindset and embrace humility</p>
+        <p>‣ life is an adventure, and love is a conscious choice</p>
+        <p>‣ be exotic, be iconic!</p>
       </p>
 
       <p className="home__description">
