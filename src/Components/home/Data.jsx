@@ -52,11 +52,7 @@ const Data = () => {
       </p>
 
       <p className="home__description">
-        I dance, <a
-          href="
-"
-          className="animated__link"
-        >DJ</a> , <a
+        I dance, DJ , <a
           href="https://www.youtube.com/@jacqline
 "
           className="animated__link"
