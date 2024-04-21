@@ -20,7 +20,6 @@ const WorkItems = ({item}) => {
         View More <i className="bx bx-right-arrow-alt work__button-icon"></i>
       </button>
 
-      {/* Render the ProjectDetailsCard if it's visible */}
       {isDetailsVisible && (
         <ProjectDetails item={item} onClose={handleCloseDetails} />
       )}
