@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import DarkMode from "../darkmode/DarkMode";
 
 export const Header = () => {
-  /* Toggle Menu */
   const [Toggle, showMenu] = useState(false);
   return (
     <div>
