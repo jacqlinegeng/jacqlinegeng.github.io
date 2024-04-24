@@ -15,7 +15,7 @@ const App = () => {
       <Header />
 
       <main className="main">
-        <Routes> {/* Wrap your Routes */}
+        <Routes> 
         <Route path="/pondering" element={<Project />} />
         <Route path="/" element={<Home />} /> 
       </Routes>
