@@ -7,7 +7,6 @@ const DarkMode = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    // You can save the dark mode preference in local storage or a state management solution like Redux
   };
 
   if (!isDarkMode) {
