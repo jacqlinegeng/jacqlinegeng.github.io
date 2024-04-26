@@ -21,11 +21,10 @@
 }
 
 .nav_container {
-  max-width: 968px;
   margin-left: auto;
   margin-right: auto;
-  height: 100px;
-  padding-right: 200px;
+  height: 70px;
+  padding-right: 300px;
 }
 
 .nav__logo,
