@@ -127,6 +127,7 @@ img {
 .section__title,
 .section__subtitle {
   text-align: center;
+  margin-top: 50px
 }
 
 .dark-mode .section__subtitle {
