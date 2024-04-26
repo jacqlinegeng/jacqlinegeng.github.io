@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <div>
       <header className="header">
-        <nav className="nav_container">
+        <nav className="nav container">
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
               <li className="nav__item">
