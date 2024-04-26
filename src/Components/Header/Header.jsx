@@ -16,14 +16,13 @@ export const Header = () => {
                   <i className="uil uil-folder-heart nav__icon"></i> PONDERING
                 </a>
               </li>
+              <li className="nav__item">
+                <a href="/writing" className="nav__link">
+                  <i className="uil uil-folder-heart nav__icon"></i> WRITING
+                </a>
+              </li>
               <li className="nav__darkmode">
                 <DarkMode />
-              </li>
-
-              <li className="nav__name">
-                <Link to="/" className="nav__link">
-                  <i className="uil uil-folder-heart nav__icon"></i> JG
-                </Link>
               </li>
             </ul>
 
