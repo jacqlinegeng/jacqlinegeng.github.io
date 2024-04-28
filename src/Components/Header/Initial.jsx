@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import "./Header.css";
+import React from "react";
+import { useNavigate } from 'react-router-dom';
 import HomeImg from "../../assets/homeimg.png";
 
-import React from 'react';
-
 const Initial = () => {
-  const handleClick = () => {
-    console.log('Image clicked!');
-  };
+  const navigate = useNavigate();
+  navigate('/');
 
   return (
-    <div onClick={handleClick}>
-      <img src={HomeImg} alt="" className="nav__img"/>
+    <div onClick={navigate}>
+      <img src={HomeImg} alt="Home" className="nav__img" />
     </div>
   );
 };

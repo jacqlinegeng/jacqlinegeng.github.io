@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import DarkMode from "../darkmode/DarkMode";
+import Initial from "./Initial";
 
 export const Header = () => {
   const [Toggle, showMenu] = useState(false);
@@ -23,6 +24,9 @@ export const Header = () => {
               </li>
               <li className="nav__darkmode">
                 <DarkMode />
+              </li>
+              <li className="nav__img">
+                <Initial />
               </li>
             </ul>
 

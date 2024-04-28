@@ -40,6 +40,11 @@
 
 }
 
+.nav__img {
+  width: 50px;
+  height: auto; 
+}
+
 .nav__link {
   display: flex;
   flex-direction: column;
