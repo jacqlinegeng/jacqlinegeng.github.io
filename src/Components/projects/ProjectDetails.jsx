@@ -5,7 +5,6 @@ const ProjectDetails = ({ item, onClose }) => {
   return (
     <div className="project__details">
       <div className="project__details-content">
-        {/* Close button */}
         <i onClick={onClose} className="uil uil-times project__details-close"></i>
         <h2 className="project__details-title">{item.title}</h2>
         <p className="project__details-description">{item.description}</p>
