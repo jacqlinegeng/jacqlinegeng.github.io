@@ -104,7 +104,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(234, 237, 83); 
+  background-color: #CDC9FF; 
   visibility: visible; 
   transform: scaleX(1);
   transition: visibility 0s, transform 0.3s ease-in-out;
