@@ -30,20 +30,18 @@
   display: flex;
   column-gap: 2rem;
   margin-left: auto;
+  justify-content: space-between;
 }
 
-.nav__item, .nav__name {
+.nav__item {
   margin-top: 2.25rem;
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
 
 }
 
 .nav__img {
   width: 50px;
-  height: auto; 
 }
+
 
 .nav__link {
   display: flex;
