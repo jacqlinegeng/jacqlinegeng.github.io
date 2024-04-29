@@ -8,7 +8,7 @@
 }
 
 .dark-button {
-  background-color: #fedd66;
+  background-color: #CDC9FF;
   width: 35px;
   height: 24px;
   border: none;
@@ -22,12 +22,12 @@
 }
 
 .dark-sun {
-  background-color: #fedd66; /* Same as the background color */
+  background-color: #CDC9FF; /* Same as the background color */
   color: #333;
 }
 
 .dark-moon {
-  background-color: #fedd66;
+  background-color: #CDC9FF;
 }
 
 @media screen and (max-width: 992px) {

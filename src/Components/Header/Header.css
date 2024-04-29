@@ -33,7 +33,7 @@
 }
 
 .nav__item, .nav__name {
-  margin-top: 0.20rem;
+  margin-top: 2.25rem;
   display: flex;
   justify-content: space-between;
   margin-left: auto;
