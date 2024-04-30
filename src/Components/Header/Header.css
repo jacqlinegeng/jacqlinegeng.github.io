@@ -53,6 +53,10 @@
   margin-top: 2.28rem;
 }
 
+.nav__item {
+  margin-left: auto;
+}
+
 .nav__darkmode {
   display: flex;
   flex-direction: column;

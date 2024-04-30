@@ -12,11 +12,10 @@ export const Header = () => {
         <nav className="nav container">
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list grid">
-            <li className="nav__img">
+              <li className="nav__img">
                 <Initial />
               </li>
               <li className="nav__item">
-                
                 <a href="/pondering" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> PONDERING
                 </a>
@@ -26,13 +25,11 @@ export const Header = () => {
                   <i className="uil uil-folder-heart nav__icon"></i> WRITING
                 </a>
               </li>
-                <li className="nav__item">
-              <li className="nav__darkmode">
-                <DarkMode />
-              </li>
-
+              <li className="nav__item">
+                <li className="nav__darkmode">
+                  <DarkMode />
                 </li>
-            
+              </li>
             </ul>
 
             <i
