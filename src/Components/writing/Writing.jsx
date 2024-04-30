@@ -7,8 +7,6 @@ const Writing = () => {
         Jacqline Geng
         <div className="home__img"></div>
       </h1>
-\
-
       
     </div>
   );

@@ -8,7 +8,6 @@ const Initial = () => {
     navigate('/');
   };
 
-
   return (
     <div onClick={handleNavigate}>
       <img src={HomeImg} alt="Home" className="nav__img" />
