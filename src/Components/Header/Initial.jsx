@@ -4,10 +4,13 @@ import HomeImg from "../../assets/homeimg.png";
 
 const Initial = () => {
   const navigate = useNavigate();
-  navigate('/');
+  const handleNavigate = () => {
+    navigate('/');
+  };
+
 
   return (
-    <div onClick={navigate}>
+    <div onClick={handleNavigate}>
       <img src={HomeImg} alt="Home" className="nav__img" />
     </div>
   );
