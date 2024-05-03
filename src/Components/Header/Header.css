@@ -75,7 +75,8 @@
 .dark-mode .nav__toggle,
 .dark-mode .nav__link,
 .dark-mode .nav__darkmode,
-.dark-mode .active-link {
+.dark-mode .active-link,
+.dark-mode .footer {
   color: #ffffff;
 }
 
