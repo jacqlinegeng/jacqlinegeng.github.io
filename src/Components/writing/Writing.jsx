@@ -3,10 +3,10 @@ import "./Writing.css";
 
 const Writing = () => {
   return (
-    <div className="home__data">
-      <h1 className="home__title">
-        Jacqline Geng
-        <div className="home__img"></div>
+    <div className="writng__data">
+      <h1 className="writing__title">
+        
+        <div className="writing__img"></div>
       </h1>
       
     </div>
