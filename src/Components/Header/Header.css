@@ -59,10 +59,9 @@
 
 .nav__darkmode {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2.1rem;
+  margin-left: 28.5rem;
 }
 
 .nav__icon,

@@ -25,10 +25,9 @@ export const Header = () => {
                   <i className="uil uil-folder-heart nav__icon"></i> WRITING
                 </a>
               </li>
-              <li className="nav__item">
-                <li className="nav__darkmode">
-                  <DarkMode />
-                </li>
+
+              <li className="nav__darkmode">
+                <DarkMode />
               </li>
             </ul>
 
