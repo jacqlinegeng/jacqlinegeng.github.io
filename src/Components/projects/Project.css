@@ -34,6 +34,10 @@
   color: #333;
 }
 
+.dark-mode .section__title{
+  color: #fff;
+}
+
 .work__container {
   display: grid;
   grid-template-columns: repeat(2, max-content);

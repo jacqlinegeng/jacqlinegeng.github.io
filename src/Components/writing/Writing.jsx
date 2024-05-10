@@ -5,8 +5,7 @@ const Writing = () => {
   return (
     <div className="writng__data">
       <h1 className="writing__title">
-        currently writing
-        currently pondering
+        coming soon
         <div className="writing__img"></div>
       </h1>
       

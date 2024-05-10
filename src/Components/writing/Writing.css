@@ -1,0 +1,7 @@
+.writng__data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin-bottom: var(--mb-2);
+}
