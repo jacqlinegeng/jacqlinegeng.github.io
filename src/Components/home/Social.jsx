@@ -13,7 +13,7 @@ const Social = () => {
       </a>
 
       <a
-        href="https://medium.com/@jacqlinegeng"
+        href="https://substack.com/@jacqline"
         className="home__social-icon"
         target="_blank"
       >
