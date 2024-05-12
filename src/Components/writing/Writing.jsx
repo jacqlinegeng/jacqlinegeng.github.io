@@ -7,6 +7,7 @@ const Writing = () => {
       <h1 className="writing__title">
         coming soon
         stay tuned
+        what i have been thinking and pondering
         <div className="writing__img"></div>
       </h1>
       
