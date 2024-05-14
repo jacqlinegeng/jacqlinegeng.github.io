@@ -8,7 +8,6 @@ const Writing = () => {
         coming soon
         stay tuned
         what i have been thinking and pondering
-        i will write
         <div className="writing__img"></div>
       </h1>
       
