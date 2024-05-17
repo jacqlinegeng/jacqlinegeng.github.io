@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
 import DarkMode from "../darkmode/DarkMode";
 import Initial from "./Initial";
 
@@ -18,11 +17,6 @@ export const Header = () => {
               <li className="nav__item">
                 <a href="/pondering" className="nav__link">
                   <i className="uil uil-folder-heart nav__icon"></i> PONDERING
-                </a>
-              </li>
-              <li className="nav__item">
-                <a href="/writing" className="nav__link">
-                  <i className="uil uil-folder-heart nav__icon"></i> WRITING
                 </a>
               </li>
 

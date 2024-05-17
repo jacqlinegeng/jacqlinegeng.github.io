@@ -44,9 +44,9 @@ const Data = () => {
         During my 9-5, I am a senior consultant at <a href="https://www2.deloitte.com/ca">Deloitte</a>. In my 5-9, I am usually found working on my <a href="https://open.spotify.com/show/7ADTUMcMgPYCsVizP1CfSx?si=91169abe7d9a40bd">podcast</a> about
         personal growth and my <a href="https://www.empoweredhealthcareconsumer.org/">healthcare project</a> in demystifying medical bills
         using LLM. Currently I'm interested in neuroscience, mental health, venture
-        capital, and creative writing. I crafted technical
+        capital, and creative writing. Previously I crafted technical
         documentation and curated the developer community at <a href="https://thirdweb.com/">thirdweb</a>. I have a
-        background in business and information systems. I self-taught coding,
+        background in business and information technology. I self-taught coding,
         blockchain development, and psychology.
       </p>
 
