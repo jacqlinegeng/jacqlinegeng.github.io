@@ -10,7 +10,7 @@ const Initial = () => {
   };
 
   return (
-    <div onClick={handleNavigate}>
+    <div onClick={handleNavigate} style={{ cursor: 'pointer' }}>
       <img src={HomeImg} alt="Home" className="nav__img" />
     </div>
   );
