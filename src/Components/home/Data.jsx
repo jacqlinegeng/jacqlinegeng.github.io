@@ -1,10 +1,21 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 const Data = () => {
+
+  const navigate = useNavigate();
+  
+  const handleNavigate = () => {
+    navigate('/');
+  };
+
   return (
     <div className="home__data">
       <h1 className="home__title">
-        Jacqline Geng
+      <span onClick={handleNavigate} style={{ cursor: 'pointer' }}>
+          Jacqline Geng
+        </span>
         <div className="home__img"></div>
       </h1>
       <p className="home__description">
