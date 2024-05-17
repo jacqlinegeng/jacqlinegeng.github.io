@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6.5rem;
 }
 
 .home__social-icon {
@@ -49,6 +49,7 @@
 }
 
 .home__description {
+  font-family: 'Spectral', sans-serif;
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-1);
 }
@@ -88,8 +89,7 @@
   justify-content: center;
   align-items: center;
   font-size: var(--small-font-size);
-  height: 25vh; 
-  margin: 0; 
+  height: 10vh; 
 }
 
 .animated__link {
