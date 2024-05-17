@@ -74,7 +74,7 @@ const Data = () => {
       </p>
 
       <p className="home__description">
-        I am always looking for something new, let's be{" "}
+        I am always looking for new adventures, let's be{" "}
         <a
           href="https://linktr.ee/jacqlineee
 "
