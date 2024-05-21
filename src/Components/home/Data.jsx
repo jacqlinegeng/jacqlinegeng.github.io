@@ -88,7 +88,7 @@ const Data = () => {
 
       <p className="home__description">
         During my 9-5, I am a senior consultant at{" "}
-        <a href="https://www2.deloitte.com/ca">Deloitte</a>. In my 5-9, I am
+        <a href="https://www2.deloitte.com/ca" className="circle">Deloitte</a>. In my 5-9, I am
         usually found working on my{" "}
         <a href="https://open.spotify.com/show/7ADTUMcMgPYCsVizP1CfSx?si=91169abe7d9a40bd">
           podcast

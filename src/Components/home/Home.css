@@ -107,7 +107,6 @@
   .home__subtitle,
   .home__description,
   .home__social-icon,
-  .home__scroll-name,
   .home__quote,
   .animated__link {
     color: #fff;
@@ -120,13 +119,6 @@
     color: #333;
 }
 
-.home__scroll-mouse {
-  stroke: var(--title-color);
-}
-
-.dark-mode .home__scroll-mouse {
-  stroke: #fff;
-}
 
 :root,
 html {
@@ -272,40 +264,6 @@ svg:last-of-type {
   }
 }
 
-.home__scroll {
-  margin-left: 9.25rem;
-}
-
-.wheel {
-  animation: scroll 2s ease infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-
-  30% {
-    transform: translateY(3.75rem);
-  }
-}
-
-
-.home__scroll-name {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  margin-right: var(mb-0-25);
-  margin-left: 2px; 
-}
-
-.home__scroll-arrow {
-  font-size: 1.25rem;
-  color: var(--title-color);
-}
-
-.dark-mode .home__scroll-arrow {
-  color: #fff;
-}
 
 /* breakpoints */
 @media screen and (max-width: 992px) {
@@ -343,10 +301,6 @@ svg:last-of-type {
     box-shadow: inset 0 0 0 4px rgb(255 255 255 / 30%);
   }
 
-  .home__scroll {
-    margin-left: 7.5rem;
-  }
-
   .footer {
     display: flex;
     justify-content: center;
@@ -382,10 +336,6 @@ svg:last-of-type {
     box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
     width: 200px;
     height: 200px;
-  }
-
-  .home__scroll {
-    display: none;
   }
 }
 
