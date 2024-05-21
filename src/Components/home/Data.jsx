@@ -20,21 +20,26 @@ const Data = () => {
       </h1>
       <p className="home__description">
         I build and explore everything about the{" "}
+        <mark>
         <a
           href="https://www.linkedin.com/posts/luzhangvc_artificialintelligence-humanconsciousness-activity-7133860301438951425-DLmz?utm_source=share&utm_medium=member_desktop
 "
           className="animated__link"
         >
           human connection
-        </a>{" "}
-        and{" "}
-        <a
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none" stroke="#CCC9FF"><path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none" stroke="#CCC9FF"><path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571"/></svg>
+</mark>
+{" "}and{" "}
+        <mark><a
           href="https://www.oprah.com/own-podcasts/the-purpose-of-your-life-is-becoming-conscious
 "
           className="animated__link"
         >
           human consciousness
         </a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none" stroke="#CCC9FF"><path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" preserveAspectRatio="none" stroke="#CCC9FF"><path d="m 3.518915,27.827324 c 55.429038,4.081 111.581115,5.822 167.117815,2.867 22.70911,-1.208 45.39827,-0.601 68.126,-0.778 28.38172,-0.223 56.76078,-1.024 85.13721,-1.33 24.17378,-0.261 48.4273,0.571 72.58114,0.571"/></svg>
+</mark>
         .
       </p>
 
