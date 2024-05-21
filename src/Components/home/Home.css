@@ -185,7 +185,7 @@ html {
   }
 }
 
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +193,7 @@ body {
   height: 100%;
   margin: 0;
   transform-style: preserve-3d;
-}
+} */
 
 mark {
   position: relative;
@@ -216,7 +216,6 @@ span {
   z-index: 1;
   display: inline-block;
   padding: 0 0.1em;
-  pointer-events: none;
 }
 
 svg {
@@ -258,11 +257,6 @@ svg:last-of-type {
   width: 104%;
   transform: skewX(-12deg);
 }
-
-/* mark:hover > svg {
-  stroke-dashoffset: 1;
-} */
-
 
 @keyframes profile__animate {
   0% {
