@@ -97,12 +97,8 @@ const Data = () => {
         <a href="https://www.empoweredhealthcareconsumer.org/">
           healthcare project
         </a>{" "}
-        in demystifying medical bills using LLM. Currently I'm interested in
-        neuroscience, mental health, venture capital, and creative writing.
-        Previously I crafted technical documentation and curated the developer
-        community at <a href="https://thirdweb.com/">thirdweb</a>. I have a
-        background in business and information technology. I self-taught coding,
-        blockchain development, and psychology.
+        in demystifying medical bills using LLM. Previously I crafted technical documentation and curated the developer
+        community at <a href="https://thirdweb.com/">thirdweb</a>. I studied business in school and I self-taught coding, and psychology.
       </p>
 
       <p className="home__description">
