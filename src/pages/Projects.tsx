@@ -2,117 +2,144 @@
 import { useState } from "react";
 import TopMenuBar from "../components/TopMenuBar";
 import Dock from "../components/Dock";
+import ProjectStory from "../components/ProjectStory";
 
 const Projects = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [showStory, setShowStory] = useState(false);
+  const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
 
-  const featuredProjects = [
+  const projects = [
     {
+      id: 1,
       title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
+      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, shopping cart, and payment processing.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"]
+      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      username: "jacqlinegeng",
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     },
     {
+      id: 2,
       title: "Task Management App",
-      description: "Collaborative task management with real-time updates and team features",
+      description: "Collaborative task management with real-time updates and team features. Built with modern web technologies for optimal performance.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tech: ["Vue.js", "Firebase", "WebSocket"]
+      tech: ["Vue.js", "Firebase", "WebSocket"],
+      username: "jacqlinegeng",
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     },
     {
+      id: 3,
       title: "AI Dashboard",
-      description: "Analytics dashboard with machine learning insights and data visualization",
+      description: "Analytics dashboard with machine learning insights and data visualization. Provides real-time analytics and predictive insights.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tech: ["Python", "TensorFlow", "React", "D3.js"]
+      tech: ["Python", "TensorFlow", "React", "D3.js"],
+      username: "jacqlinegeng",
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     }
   ];
 
-  const gridProjects = Array.from({ length: 16 }, (_, i) => ({
-    id: i + 1,
-    title: `Project ${i + 1}`,
-    description: "A cool project description",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-  }));
+  const handleStoryOpen = (index: number) => {
+    setCurrentStoryIndex(index);
+    setShowStory(true);
+  };
+
+  const handleStoryNext = () => {
+    if (currentStoryIndex < projects.length - 1) {
+      setCurrentStoryIndex(currentStoryIndex + 1);
+    } else {
+      setShowStory(false);
+    }
+  };
+
+  const handleStoryPrev = () => {
+    if (currentStoryIndex > 0) {
+      setCurrentStoryIndex(currentStoryIndex - 1);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <TopMenuBar />
       
       <div className="pt-8 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Featured Projects Slideshow */}
-          <div className="bg-white rounded-xl shadow-lg border border-gray-200 mb-8 overflow-hidden">
-            <div className="relative h-96">
-              <img
-                src={featuredProjects[currentSlide].image}
-                alt={featuredProjects[currentSlide].title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="text-center text-white max-w-2xl px-8">
-                  <h2 className="text-3xl font-bold mb-4">{featuredProjects[currentSlide].title}</h2>
-                  <p className="text-lg mb-6">{featuredProjects[currentSlide].description}</p>
-                  <div className="flex flex-wrap justify-center gap-2">
-                    {featuredProjects[currentSlide].tech.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-white/20 rounded-full text-sm">
-                        {tech}
-                      </span>
-                    ))}
+          {/* Stories Grid */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">My Projects</h2>
+            
+            {/* Stories Row */}
+            <div className="flex space-x-4 mb-8 overflow-x-auto pb-4">
+              {projects.map((project, index) => (
+                <button
+                  key={project.id}
+                  onClick={() => handleStoryOpen(index)}
+                  className="flex-shrink-0 group"
+                >
+                  <div className="relative">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-0.5">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full rounded-full object-cover border-2 border-white"
+                      />
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
                   </div>
-                </div>
-              </div>
-              
-              {/* Navigation */}
-              <button
-                onClick={() => setCurrentSlide((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length)}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white transition-colors"
-              >
-                ←
-              </button>
-              <button
-                onClick={() => setCurrentSlide((prev) => (prev + 1) % featuredProjects.length)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white transition-colors"
-              >
-                →
-              </button>
-              
-              {/* Dots */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {featuredProjects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/50'
-                    }`}
-                  />
-                ))}
-              </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 max-w-[80px] truncate">
+                    {project.title}
+                  </p>
+                </button>
+              ))}
             </div>
-          </div>
 
-          {/* Projects Grid */}
-          <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">All Projects</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {gridProjects.map((project) => (
+            {/* Projects Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors cursor-pointer group"
+                  className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
+                  onClick={() => handleStoryOpen(projects.indexOf(project))}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-24 object-cover rounded-md mb-3 group-hover:scale-105 transition-transform"
+                    className="w-full h-48 object-cover"
                   />
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{project.title}</h3>
-                  <p className="text-gray-600 text-xs">{project.description}</p>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded text-xs text-gray-700 dark:text-gray-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Story Modal */}
+      {showStory && (
+        <ProjectStory
+          projects={projects}
+          currentIndex={currentStoryIndex}
+          onClose={() => setShowStory(false)}
+          onNext={handleStoryNext}
+          onPrev={handleStoryPrev}
+        />
+      )}
 
       <Dock />
     </div>
