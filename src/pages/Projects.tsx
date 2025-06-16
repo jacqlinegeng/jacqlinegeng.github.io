@@ -43,11 +43,16 @@ const Projects = () => {
     setShowStory(true);
   };
 
+  const handleStoryClose = () => {
+    setShowStory(false);
+    setCurrentStoryIndex(0);
+  };
+
   const handleStoryNext = () => {
     if (currentStoryIndex < projects.length - 1) {
       setCurrentStoryIndex(currentStoryIndex + 1);
     } else {
-      setShowStory(false);
+      handleStoryClose();
     }
   };
 
@@ -135,7 +140,7 @@ const Projects = () => {
         <ProjectStory
           projects={projects}
           currentIndex={currentStoryIndex}
-          onClose={() => setShowStory(false)}
+          onClose={handleStoryClose}
           onNext={handleStoryNext}
           onPrev={handleStoryPrev}
         />

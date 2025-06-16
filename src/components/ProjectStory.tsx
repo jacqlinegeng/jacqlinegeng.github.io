@@ -27,6 +27,25 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
 
   if (!project) return null;
 
+  const handleClose = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    onClose();
+  };
+
+  const handleNext = () => {
+    if (currentIndex < projects.length - 1) {
+      onNext();
+    } else {
+      onClose();
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      onPrev();
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
       {/* Story Progress Bars */}
@@ -57,7 +76,7 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
           <span className="text-white/60 text-sm">2h</span>
         </div>
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="text-white p-2 hover:bg-white/20 rounded-full transition-colors"
         >
           <X size={20} />
@@ -66,7 +85,7 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
 
       {/* Navigation Areas */}
       <button
-        onClick={onPrev}
+        onClick={handlePrev}
         className="absolute left-0 top-0 w-1/3 h-full z-10 flex items-center justify-start pl-4 text-white/0 hover:text-white/50 transition-colors"
         disabled={currentIndex === 0}
       >
@@ -74,11 +93,10 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
       </button>
 
       <button
-        onClick={onNext}
+        onClick={handleNext}
         className="absolute right-0 top-0 w-1/3 h-full z-10 flex items-center justify-end pr-4 text-white/0 hover:text-white/50 transition-colors"
-        disabled={currentIndex === projects.length - 1}
       >
-        {currentIndex < projects.length - 1 && <ChevronRight size={24} />}
+        {currentIndex < projects.length - 1 ? <ChevronRight size={24} /> : <X size={24} />}
       </button>
 
       {/* Main Content */}
