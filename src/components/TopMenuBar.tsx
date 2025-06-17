@@ -1,5 +1,5 @@
 
-import { Linkedin, X, Github, Sun, Moon } from "lucide-react";
+import { Linkedin, Twitter, Github, Sun, Moon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 
@@ -16,7 +16,7 @@ const TopMenuBar = () => {
             onClick={() => navigate('/')}
             className="text-white font-bold text-sm hover:bg-white/10 rounded px-1 transition-colors"
           >
-            🍎
+            🌸
           </button>
           <div className="text-white text-sm font-medium">Jacqline Geng</div>
         </div>
@@ -31,7 +31,7 @@ const TopMenuBar = () => {
             {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
           </button>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/jacqlinegeng/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -39,7 +39,7 @@ const TopMenuBar = () => {
             <Linkedin size={16} />
           </a>
           <a 
-            href="https://github.com" 
+            href="https://github.com/jacqlinegeng" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -47,12 +47,12 @@ const TopMenuBar = () => {
             <Github size={16} />
           </a>
           <a 
-            href="https://twitter.com" 
+            href="https://x.com/inthecosmicdust" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
           >
-            <X size={16} />
+            <Twitter size={16} />
           </a>
           <div className="text-white text-xs">
             {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

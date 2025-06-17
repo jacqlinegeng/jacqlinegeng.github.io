@@ -49,16 +49,16 @@ const About = () => {
                       Finding new paths to reconnect myself before getting back in track.
                     </p>
                     <div className="text-xs text-gray-500 dark:text-gray-500 mt-4">
-                      POSTED ON @navspace<br />
+                      POSTED ON @xxx<br />
                       01 Q2 03 (+)
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Handscripted by Joy Desk<br />
-                      better known as EDELRIC<br />
-                      (2025/CofroLa)
+                      Handscripted by Jacqline<br />
+                      better known as ---<br />
+                      (2025/inthecosmicdust)
                     </p>
                   </div>
                 </div>

@@ -10,8 +10,8 @@ const Index = () => {
   const navigate = useNavigate();
 
   const folders = [
-    { name: "About", icon: "👤", route: "/about" },
-    { name: "Projects", icon: "💼", route: "/projects" },
+    { name: "About", icon: "🤓", route: "/about" },
+    { name: "Projects", icon: "💻", route: "/projects" },
     { name: "Writing", icon: "📝", route: "/writing" }
   ];
 
@@ -31,16 +31,16 @@ const Index = () => {
         <div className="text-center mb-12">
           <div className="relative">
             <div className="absolute -top-8 -left-16 text-purple-300 text-sm font-handwriting transform -rotate-12">
-              UI/UX
+              PRODUCT MANAGEMENT
             </div>
             <div className="absolute -top-6 -right-20 text-blue-300 text-sm font-handwriting transform rotate-12">
-              GRAPHIC DESIGN
+              FINANCIAL ENGINEERING
             </div>
             <div className="absolute -bottom-8 -left-20 text-pink-300 text-sm font-handwriting transform rotate-12">
-              ILLUSTRATION
+              STARTUP
             </div>
             <div className="absolute -bottom-6 -right-16 text-purple-300 text-sm font-handwriting transform -rotate-12">
-              MOTION
+              VENTURE CAPITAL
             </div>
             
             <h1 className="text-6xl md:text-8xl font-black text-white mb-4 tracking-tight">
@@ -52,10 +52,10 @@ const Index = () => {
             </h1>
           </div>
           <div className="text-white/80 text-lg mt-4">
-            create animation
+            i build products, design experiences, and create opportunities.
           </div>
           <div className="text-white/60 text-sm mt-8">
-            /made with ♥ 2025
+            /made with ♥ by jacqline @ 2025
           </div>
         </div>
       </div>

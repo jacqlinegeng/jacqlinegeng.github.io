@@ -11,7 +11,7 @@ const Dock = () => {
   const dockItems = [
     { 
       name: "Messages", 
-      icon: "💬", 
+      icon: "📧", 
       action: () => setShowContact(true)
     },
     { 
@@ -21,13 +21,13 @@ const Dock = () => {
     },
     { 
       name: "VS Code", 
-      icon: "⚡", 
+      icon: "💻", 
       action: () => navigate("/projects")
     },
     { 
       name: "Spotify", 
       icon: "🎵", 
-      action: () => window.open("https://open.spotify.com", "_blank")
+      action: () => window.open("https://open.spotify.com/user/22uvhgmtzptpdu5q734fqbzqi?si=bbd67c30d6bf4dfe", "_blank")
     }
   ];
 
