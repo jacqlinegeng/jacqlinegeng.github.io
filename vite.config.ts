@@ -1,9 +1,10 @@
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig({
-  base: '/', 
+  base: '/', // Use root path for GitHub Actions
   plugins: [react()],
   resolve: {
     alias: {
@@ -11,11 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: 'dist',
     assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
   },
 });
