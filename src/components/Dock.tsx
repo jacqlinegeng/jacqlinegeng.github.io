@@ -1,7 +1,7 @@
-
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
+import { Zap, PenTool, MessageSquare, Music } from "lucide-react";
 
 const Dock = () => {
   const navigate = useNavigate();
@@ -10,24 +10,24 @@ const Dock = () => {
 
   const dockItems = [
     { 
-      name: "Messages", 
-      icon: "📧", 
-      action: () => setShowContact(true)
-    },
-    { 
-      name: "Notes", 
-      icon: "📝", 
-      action: () => navigate("/writing")
-    },
-    { 
-      name: "VS Code", 
-      icon: "💻", 
+      name: "Projects", 
+      icon: <Zap size={20} className="text-white" />, 
       action: () => navigate("/projects")
     },
     { 
+      name: "Writing", 
+      icon: <PenTool size={20} className="text-white" />, 
+      action: () => navigate("/writing")
+    },
+    { 
+      name: "Messages", 
+      icon: <MessageSquare size={20} className="text-white" />, 
+      action: () => setShowContact(true)
+    },
+    { 
       name: "Spotify", 
-      icon: "🎵", 
-      action: () => window.open("https://open.spotify.com/user/22uvhgmtzptpdu5q734fqbzqi?si=bbd67c30d6bf4dfe", "_blank")
+      icon: <Music size={20} className="text-white" />, 
+      action: () => window.open("https://open.spotify.com", "_blank")
     }
   ];
 
@@ -40,7 +40,7 @@ const Dock = () => {
               <button
                 key={item.name}
                 onClick={item.action}
-                className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center text-xl transition-all duration-200 hover:scale-110 hover:-translate-y-1"
+                className="w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-200 hover:scale-110 hover:-translate-y-1"
                 title={item.name}
               >
                 {item.icon}
