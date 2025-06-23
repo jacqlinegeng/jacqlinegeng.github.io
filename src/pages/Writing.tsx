@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import TopMenuBar from "../components/TopMenuBar";
 import Dock from "../components/Dock";
@@ -86,41 +85,41 @@ Building inclusive experiences makes the web better for everyone.`
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <TopMenuBar />
       
       <div className="pt-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
             {/* Notes App Header */}
-            <div className="flex items-center justify-between px-4 py-3 bg-yellow-50 border-b border-gray-200">
+            <div className="flex items-center justify-between px-4 py-3 bg-yellow-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              <h1 className="text-lg font-semibold text-gray-900">Notes</h1>
+              <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Writing</h1>
               <div className="w-16"></div>
             </div>
 
             <div className="flex h-[70vh]">
               {/* Sidebar with notes list */}
-              <div className="w-1/3 border-r border-gray-200 bg-gray-50">
-                <div className="p-4 border-b border-gray-200">
-                  <h2 className="font-semibold text-gray-900">All Notes</h2>
+              <div className="w-1/3 border-r border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700">
+                <div className="p-4 border-b border-gray-200 dark:border-gray-600">
+                  <h2 className="font-semibold text-gray-900 dark:text-white">All Notes</h2>
                 </div>
                 <div className="overflow-y-auto">
                   {notes.map((note, index) => (
                     <div
                       key={index}
                       onClick={() => setSelectedNote(index)}
-                      className={`p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-100 transition-colors ${
-                        selectedNote === index ? 'bg-yellow-100 border-l-4 border-l-yellow-500' : ''
+                      className={`p-4 border-b border-gray-200 dark:border-gray-600 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors ${
+                        selectedNote === index ? 'bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-l-yellow-500' : ''
                       }`}
                     >
-                      <h3 className="font-medium text-gray-900 mb-1">{note.title}</h3>
-                      <p className="text-sm text-gray-600 mb-2">{note.date}</p>
-                      <p className="text-sm text-gray-500">{note.preview}</p>
+                      <h3 className="font-medium text-gray-900 dark:text-white mb-1">{note.title}</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{note.date}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{note.preview}</p>
                     </div>
                   ))}
                 </div>
@@ -130,7 +129,7 @@ Building inclusive experiences makes the web better for everyone.`
               <div className="flex-1 overflow-y-auto">
                 <div className="p-8">
                   <div className="prose max-w-none">
-                    <pre className="whitespace-pre-wrap font-sans text-gray-900 leading-relaxed">
+                    <pre className="whitespace-pre-wrap font-sans text-gray-900 dark:text-gray-100 leading-relaxed">
                       {notes[selectedNote].content}
                     </pre>
                   </div>

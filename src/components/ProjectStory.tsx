@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, Heart, MessageCircle, Send, Bookmark } from "lucide-react";
 
