@@ -8,7 +8,7 @@ const TopMenuBar = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="fixed top-0 left-0 right-0 h-8 bg-gray-900/30 backdrop-blur-xl border-b border-white/10 z-50">
+    <div className="fixed top-0 left-0 right-0 h-8 bg-gray-900/30 backdrop-blur-xl border-b border-white/10 z-50 dark:bg-gray-900/30">
       <div className="flex items-center justify-between h-full px-4">
         {/* Left side - Apple menu and app name */}
         <div className="flex items-center space-x-4">
@@ -18,7 +18,12 @@ const TopMenuBar = () => {
           >
             🌸
           </button>
-          <div className="text-white text-sm font-medium">Jacqline Geng</div>
+          <button 
+            onClick={() => navigate('/')}
+            className="text-white text-sm font-medium hover:bg-white/10 rounded px-1 transition-colors"
+          >
+            Jacqline Geng
+          </button>
         </div>
 
         {/* Right side - Social icons and controls */}
@@ -28,10 +33,15 @@ const TopMenuBar = () => {
             className="text-white/80 hover:text-white transition-colors p-1"
             title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
           >
-            {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+            <div className="w-6 h-6 relative">
+              {/* Light switch icon - made larger */}
+              <div className={`w-5 h-3 border-2 border-white/60 rounded-sm relative transition-colors ${theme === 'dark' ? 'bg-white/20' : 'bg-white/60'}`}>
+                <div className={`w-2 h-2 bg-white rounded-full absolute top-0.5 transition-transform ${theme === 'dark' ? 'translate-x-0' : 'translate-x-2'}`}></div>
+              </div>
+            </div>
           </button>
           <a 
-            href="https://www.linkedin.com/in/jacqlinegeng/" 
+            href="https://linkedin.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -39,7 +49,7 @@ const TopMenuBar = () => {
             <Linkedin size={16} />
           </a>
           <a 
-            href="https://github.com/jacqlinegeng" 
+            href="https://github.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -47,7 +57,7 @@ const TopMenuBar = () => {
             <Github size={16} />
           </a>
           <a 
-            href="https://x.com/inthecosmicdust" 
+            href="https://twitter.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
