@@ -1,5 +1,4 @@
-
-import { Linkedin, Twitter, Github, Sun, Moon } from "lucide-react";
+import { Linkedin, Twitter, Github, Flower } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 
@@ -14,9 +13,9 @@ const TopMenuBar = () => {
         <div className="flex items-center space-x-4">
           <button 
             onClick={() => navigate('/')}
-            className="text-white font-bold text-sm hover:bg-white/10 rounded px-1 transition-colors"
+            className="text-white font-bold text-sm hover:bg-white/10 rounded px-1 transition-colors flex items-center"
           >
-            🌸
+            <Flower size={16} className="text-white" />
           </button>
           <button 
             onClick={() => navigate('/')}
@@ -30,10 +29,10 @@ const TopMenuBar = () => {
         <div className="flex items-center space-x-3">
           <button
             onClick={toggleTheme}
-            className="text-white/80 hover:text-white transition-colors p-1"
+            className="text-white/80 hover:text-white transition-colors p-1 flex items-center"
             title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
           >
-            <div className="w-6 h-6 relative">
+            <div className="w-6 h-4 relative">
               {/* Light switch icon - made larger */}
               <div className={`w-5 h-3 border-2 border-white/60 rounded-sm relative transition-colors ${theme === 'dark' ? 'bg-white/20' : 'bg-white/60'}`}>
                 <div className={`w-2 h-2 bg-white rounded-full absolute top-0.5 transition-transform ${theme === 'dark' ? 'translate-x-0' : 'translate-x-2'}`}></div>

@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
-import { Zap, PenTool, MessageSquare, Music } from "lucide-react";
+import { Home, Zap, PenTool, MessageSquare, Music } from "lucide-react";
 
 const Dock = () => {
   const navigate = useNavigate();
@@ -9,6 +9,11 @@ const Dock = () => {
   const [showContact, setShowContact] = useState(false);
 
   const dockItems = [
+    { 
+      name: "Home", 
+      icon: <Home size={20} className="text-white" />, 
+      action: () => navigate("/")
+    },
     { 
       name: "Projects", 
       icon: <Zap size={20} className="text-white" />, 
