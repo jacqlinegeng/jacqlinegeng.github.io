@@ -1,4 +1,3 @@
-
 import { Folder } from "lucide-react";
 
 interface DesktopFolderProps {
@@ -16,7 +15,7 @@ const DesktopFolder = ({ name, onClick }: DesktopFolderProps) => {
       <div className="w-16 h-16 bg-purple-200/80 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center mb-2 group-hover:bg-purple-300/80 transition-colors">
         <Folder size={32} className="text-purple-600" />
       </div>
-      <span className="text-white text-sm font-medium text-center drop-shadow-lg">
+      <span className="text-black dark:text-white text-sm font-medium text-center drop-shadow-lg">
         {name}
       </span>
     </div>
