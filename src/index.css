@@ -98,6 +98,7 @@
   } */
 
   body {
+    @apply font-mono;
     @apply bg-background text-foreground;
   }
 }
