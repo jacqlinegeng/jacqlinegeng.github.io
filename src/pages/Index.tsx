@@ -1,3 +1,4 @@
+
 import { useNavigate } from "react-router-dom";
 import TopMenuBar from "../components/TopMenuBar";
 import Dock from "../components/Dock";
@@ -15,7 +16,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 relative overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-black relative overflow-hidden">
       {/* Animated Vision Board Background */}
       <VisionBoard />
       
@@ -42,7 +43,7 @@ const Index = () => {
               MOTION
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-black dark:text-white mb-4 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-black text-black dark:text-white mb-4 tracking-tight">
               <TypingAnimation 
                 text="hi, i'm Jacqline Geng" 
                 speed={80}
