@@ -52,7 +52,7 @@ const Index = () => {
             </h1>
           </div>
           <div className="text-black/80 dark:text-white/80 text-lg mt-4">
-            i build everything from fintech apps to neurotech interfaces.
+            i build stuff blending finance, tech, and creativity.
           </div>
         </div>
       </div>
