@@ -31,16 +31,19 @@ const Index = () => {
         <div className="text-center mb-12">
           <div className="relative">
             <div className="absolute -top-8 -left-16 text-gray-400 dark:text-purple-300 text-sm transform -rotate-12">
-              UI/UX
+              startup
             </div>
             <div className="absolute -top-6 -right-20 text-gray-400 dark:text-blue-300 text-sm transform rotate-12">
-              GRAPHIC DESIGN
+              product & strategy
             </div>
             <div className="absolute -bottom-8 -left-20 text-gray-400 dark:text-pink-300 text-sm transform rotate-12">
-              ILLUSTRATION
+              AI & data engineering
             </div>
             <div className="absolute -bottom-6 -right-16 text-gray-400 dark:text-purple-300 text-sm transform -rotate-12">
-              MOTION
+              mental health
+            </div>
+            <div className="absolute -top-20 -right-7 text-gray-400 dark:text-purple-300 text-sm transform -rotate-12">
+              creativity
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-black text-black dark:text-white mb-4 tracking-tight">
