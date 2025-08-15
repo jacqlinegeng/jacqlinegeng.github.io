@@ -56,9 +56,9 @@ const About = () => {
 
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Handscripted by Jacqline<br />
-                      better known as ---<br />
-                      (2025/inthecosmicdust)
+                      created by jacqline<br />
+                      -------<br />
+                      (2025// lock in mode)
                     </p>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const About = () => {
                 <div className="relative">
                   <div className="bg-white dark:bg-gray-700 rounded-2xl p-4 shadow-lg">
                     <img
-                      src="/lovable-uploads/portfolio_pic.png"
+                      src="/uploads/portfolio_pic.png"
                       alt="Jacqline Geng"
                       className="w-full h-80 object-cover rounded-xl"
                     />
@@ -82,13 +82,13 @@ const About = () => {
                   {/* Text elements around image */}
                   <div className="absolute top-8 -right-12 bg-white dark:bg-gray-600 rounded-lg p-2 shadow-md transform rotate-6">
                     <p className="text-xs text-gray-700 dark:text-gray-300 max-w-24">
-                      ACTUALLY, WHETHER IT RAINS OR NOT, WE ALL LIVE UNDER THE SAME SKY SO WE ARE ALWAYS TOGETHER.
+                      GROW, GLOW, FLOW
                     </p>
                   </div>
 
-                  <div className="absolute bottom-16 -left-8 bg-white dark:bg-gray-600 rounded-lg p-2 shadow-md transform -rotate-3">
+                  <div className="absolute bottom-20 -left-8 bg-white dark:bg-gray-600 rounded-lg p-2 shadow-md transform -rotate-3">
                     <p className="text-xs text-gray-700 dark:text-gray-300 max-w-20">
-                      WE BREATHE THE SAME AIR WE LOOK AT THE SAME SKY WE LOOK AT THE SAME MOON
+                      CHOOSE YOUR HARD; FIRST PRINCIPLES THINKING>>>
                     </p>
                   </div>
                 </div>
