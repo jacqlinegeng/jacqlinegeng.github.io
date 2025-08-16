@@ -30,35 +30,33 @@ const About = () => {
             {/* Hero Section with styled layout */}
             <div className="relative mb-12">
               {/* Background decorative elements */}
-              <div className="absolute top-0 left-0 text-blue-300 text-2xl transform rotate-12">Aa.</div>
+              <div className="absolute top-0 left-0 text-blue-300 text-sm transform rotate-12">JACQLINE G</div>
               <div className="absolute top-4 right-8 text-pink-300 text-lg transform -rotate-12">✨</div>
-              <div className="absolute bottom-8 left-16 text-purple-300 text-sm transform rotate-45">📎</div>
-              <div className="absolute bottom-4 right-4 text-blue-300 text-2xl transform -rotate-12">Ee.</div>
+              <div className="absolute bottom-8 left-6 text-purple-300 text-sm transform rotate-45">📎</div>
+              <div className="absolute bottom-4 right-4 text-blue-300 text-2xl transform -rotate-12"></div>
 
               {/* Main content layout */}
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Left side - Text content */}
                 <div className="space-y-6">
                   <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-                    <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-2">TUESDAY</h3>
-                    <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">freedom</h4>
+                    <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">hello/bonjour/你好</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                      January 7th by 2025 Timeline on Facebook
+                      i am a consultant by day, and a creative by night. i blend finance, tech, and creativity to build innovative solutions that inspire and empower others.
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                      Finding new paths to reconnect myself before getting back in track.
+                      FOLLOW ME ON MY JOURNEY AS I EXPLORE THE INTERSECTION OF TECH, FINANCE, AND HUMAN CONSCIOUSNESS.
                     </p>
                     <div className="text-xs text-gray-500 dark:text-gray-500 mt-4">
-                      POSTED ON @xxx<br />
-                      01 Q2 03 (+)
+                      LAST EDITED ON AUG 15, 2025<br />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                       created by jacqline<br />
-                      -------<br />
-                      (2025// lock in mode)
+                      -------------------<br />
+                      2025 // lock in mode
                     </p>
                   </div>
                 </div>
