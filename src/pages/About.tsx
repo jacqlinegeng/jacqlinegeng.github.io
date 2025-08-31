@@ -86,7 +86,7 @@ const About = () => {
 
                   <div className="absolute bottom-20 -left-8 bg-white dark:bg-gray-600 rounded-lg p-2 shadow-md transform -rotate-3">
                     <p className="text-xs text-gray-700 dark:text-gray-300 max-w-20">
-                      CHOOSE YOUR HARD; FIRST PRINCIPLES THINKING>>>
+                      CHOOSE YOUR HARD; FIRST PRINCIPLES THINKING
                     </p>
                   </div>
                 </div>
