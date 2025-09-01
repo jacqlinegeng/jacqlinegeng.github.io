@@ -91,7 +91,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           <div className="p-6">
             <div className="mb-6">
               <h3 className="text-white text-lg font-semibold mb-2">Get in Touch</h3>
-              <p className="text-white/70 text-sm">Send me a message and I'll get back to you soon!</p>
+              <p className="text-white/70 text-sm">Send me a message & leave your contact info, and I'll get back to you soon!</p>
             </div>
 
             {/* Status Messages */}
