@@ -152,7 +152,7 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
           </div>
           
           <div className="text-white text-sm">
-            <span className="font-semibold">42 likes</span>
+            <span className="font-semibold">66 likes</span>
           </div>
         </div>
       </div>
