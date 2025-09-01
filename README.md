@@ -1,8 +1,8 @@
-# Welcome to my portfolio
+# Welcome ✧
 
 hi, my name is Jacqline and i'm really glad to meet you
 
-visit **jacqlinegeng.me** to see my portfolio ⋆*✧.*☽
+visit **[jacqlinegeng.me](https://jacqlinegeng.me/)** to see my portfolio ⋆*✧.*☽
 
 
 ---------------------------
