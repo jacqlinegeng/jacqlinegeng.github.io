@@ -30,7 +30,7 @@ const Index = () => {
         {/* Portfolio title with decorative elements */}
         <div className="text-center mb-12">
           <div className="relative">
-            <div className="absolute -top-8 -left-16 text-gray-400 dark:text-purple-300 text-sm transform -rotate-12">
+            {/* <div className="absolute -top-8 -left-16 text-gray-400 dark:text-purple-300 text-sm transform -rotate-12">
               startup
             </div>
             <div className="absolute -top-6 -right-20 text-gray-400 dark:text-blue-300 text-sm transform rotate-12">
@@ -44,7 +44,7 @@ const Index = () => {
             </div>
             <div className="absolute -top-20 -right-7 text-gray-400 dark:text-purple-300 text-sm transform -rotate-12">
               creativity
-            </div>
+            </div> */}
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-black text-black dark:text-white mb-4 tracking-tight">
               <TypingAnimation 
