@@ -15,7 +15,7 @@ const Switch: React.FC<SwitchProps> = ({ theme, toggleTheme }) => {
         onChange={toggleTheme}
       />
       <span
-        className="absolute inset-0 cursor-pointer rounded-[30px] transition duration-500 bg-gray-200 peer-checked:bg-gray-400 dark:bg-[#0a1a44] dark:peer-checked:bg-[#102b6a] before:content-[''] before:absolute before:h-[0.8em] before:w-[0.8em] before:rounded-full before:left-[8%] before:bottom-[10%] before:shadow-[inset_8px_-4px_0px_0px_#fff000] before:bg-gray-200 dark:before:bg-[#624F82] before:transition before:duration-500 peer-checked:before:translate-x-full peer-checked:before:shadow-[inset_15px_-4px_0px_15px_#624F82]"
+        className="absolute inset-0 cursor-pointer rounded-[30px] transition duration-500 bg-white peer-checked:bg-[#898AC4] before:content-[''] before:absolute before:h-[0.8em] before:w-[0.8em] before:rounded-full before:left-[8%] before:bottom-[10%] before:shadow-[inset_8px_-4px_0px_0px_#898AC4] before:bg-white before:transition before:duration-500 peer-checked:before:translate-x-full peer-checked:before:shadow-[inset_15px_-4px_0px_15px_#fff] peer-checked:before:bg-white"
       />
     </label>
   );
