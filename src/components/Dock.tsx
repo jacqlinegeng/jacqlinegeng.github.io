@@ -32,7 +32,7 @@ const Dock = () => {
     { 
       name: "Spotify", 
       icon: <Music size={20} className="text-white" />, 
-      action: () => window.open("https://open.spotify.com", "_blank")
+      action: () => window.open("https://open.spotify.com/user/22uvhgmtzptpdu5q734fqbzqi?si=36328d1b344c4e6e", "_blank")
     }
   ];
 
