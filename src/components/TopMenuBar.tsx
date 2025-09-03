@@ -23,7 +23,7 @@ const TopMenuBar = () => {
           </button>
           <button
             onClick={() => navigate('/')}
-            className="text-white text-sm font-medium hover:bg-white/10 rounded px-1 transition-colors"
+            className="text-white text-sm font-medium hover:bg-white/10 rounded px-1 transition-colors font-mono"
           >
             Jacqline Geng
           </button>
@@ -56,7 +56,7 @@ const TopMenuBar = () => {
           >
             <BrandX size={16} />
           </a>
-          <div className="text-white text-xs">
+          <div className="text-white text-xs font-mono" style={{ fontFamily: 'JetBrains Mono, monospace !important' }}>
             {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </div>
         </div>

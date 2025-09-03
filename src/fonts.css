@@ -1,35 +1,33 @@
+/* Regular */
 @font-face {
   font-family: 'PP Editorial New';
-  src: url('/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
-  font-weight: 200;
+  src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
+  font-weight: 400; /* normal */
   font-style: normal;
-  font-display: swap;
 }
 
+/* Bold */
 @font-face {
   font-family: 'PP Editorial New';
-  src: url('/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PP Editorial New';
-  src: url('/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
+  src: url('/fonts/PPEditorialNew-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
 }
 
+/* Ultra Light */
 @font-face {
   font-family: 'PP Editorial New';
   src: url('/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
-  font-weight: 900;
+  font-weight: 200; /* light/ultralight */
   font-style: normal;
-  font-display: swap;
 }
 
-* {
-  font-family: 'PP Editorial New', Georgia, serif !important;
+/* Utility class */
+.editorial-font {
+  font-family: 'PP Editorial New', Georgia, serif;
+}
+
+.editorial-ultralight {
+  font-family: 'PP Editorial New', Georgia, serif;
+  font-weight: 200;
 }
