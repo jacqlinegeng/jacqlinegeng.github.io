@@ -32,7 +32,7 @@ const TopMenuBar = () => {
         <div className="flex items-center space-x-3">
           <Switch theme={theme} toggleTheme={toggleTheme} />
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/jacqlinegeng/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
@@ -40,7 +40,7 @@ const TopMenuBar = () => {
             <Linkedin size={16} />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/jacqlinegeng"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
