@@ -1,5 +1,6 @@
 
-import { Linkedin, Twitter, Github, Flower } from "lucide-react";
+import { Linkedin, Github, Flower } from "lucide-react";
+import { BrandX } from "@mynaui/icons-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import Switch from "./Switch";
@@ -51,9 +52,9 @@ const TopMenuBar = () => {
             href="https://x.com/inthecosmicdust"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/80 hover:text-white transition-colors p-1"
+            className="text-white/80 hover:text-white transition-colors p-0.5"
           >
-            <Twitter size={16} />
+            <BrandX size={16} />
           </a>
           <div className="text-white text-xs">
             {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
