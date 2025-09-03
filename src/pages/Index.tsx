@@ -75,11 +75,11 @@ const Index = () => {
       </div>
 
       {/* Footer moved to bottom right */}
-      <div className="fixed bottom-4 right-4 z-10">
+      {/* <div className="fixed bottom-4 right-4 z-10">
         <div className="text-black/60 dark:text-white/60 text-sm">
-          /made with ♥ by jacqline 2025
+          // updated 2025
         </div>
-      </div>
+      </div> */}
 
       <Dock />
     </div>
