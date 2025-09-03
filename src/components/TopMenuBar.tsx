@@ -48,7 +48,7 @@ const TopMenuBar = () => {
             <Github size={16} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/inthecosmicdust"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/80 hover:text-white transition-colors p-1"
