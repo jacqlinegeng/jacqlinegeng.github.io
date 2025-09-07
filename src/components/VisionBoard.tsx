@@ -4,9 +4,9 @@ const VisionBoard = () => {
   const [items, setItems] = useState<Array<{ id: number; x: number; y: number; text: string; delay: number }>>([]);
 
   const visionItems = [
-    'DESIGN', 'CREATE', 'INSPIRE', 'INNOVATE', 'DREAM', 'BUILD', 'ART', 'UI/UX',
-    'VISUAL', 'MOTION', 'BRAND', 'CREATIVE', 'DIGITAL', 'MODERN', 'MINIMAL',
-    'AESTHETIC', 'PASSION', 'VISION', 'FUTURE', 'TREND'
+    'FINTECH', 'STARTUP', 'AI', 'STRATEGY', 'PRODUCT', 'BUILD', 'DATA', 'ANIMATION',
+    'TECH', 'ENGINEERING', 'GROWTH', 'CREATIVE', 'WRITING', 'CONTENT', 'QUANT',
+    'LEADERSHIP', 'PASSION', 'ENTREPRENEUR', 'CODE', 'IMPACT'
   ];
 
   useEffect(() => {
