@@ -62,14 +62,14 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-background text-foreground">
       <TopMenuBar />
       
       <div className="pt-8 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Stories Grid */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">My Projects</h2>
+          <div className="bg-card border-border text-card-foreground rounded-xl shadow-lg border p-6">
+            <h2 className="text-2xl font-bold mb-6">My Projects</h2>
             
             {/* Stories Row */}
             <div className="flex space-x-4 mb-8 overflow-x-auto pb-4">
@@ -89,7 +89,7 @@ const Projects = () => {
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
                   </div>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 max-w-[80px] truncate">
+                  <p className="text-xs text-muted-foreground mt-2 max-w-[80px] truncate">
                     {project.title}
                   </p>
                 </button>
@@ -101,7 +101,7 @@ const Projects = () => {
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
+                  className="bg-secondary rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
                   onClick={() => handleStoryOpen(projects.indexOf(project))}
                 >
                   <img
@@ -113,14 +113,14 @@ const Projects = () => {
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
+                    <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-1">
                       {project.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded text-xs text-gray-700 dark:text-gray-300"
+                          className="px-2 py-1 bg-muted rounded text-xs text-muted-foreground"
                         >
                           {tech}
                         </span>
