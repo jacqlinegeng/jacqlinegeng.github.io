@@ -12,8 +12,8 @@ const DesktopFolder = ({ name, onClick }: DesktopFolderProps) => {
       onClick={onClick}
       className="flex flex-col items-center cursor-pointer group hover:scale-105 transition-transform duration-200"
     >
-      <div className="w-16 h-16 bg-purple-200/80 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center mb-2 group-hover:bg-purple-300/80 transition-colors">
-        <Folder size={32} className="text-purple-600" />
+      <div className="w-16 h-16 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center mb-2 transition-colors" style={{ backgroundColor: '#C0C9EE' }}>
+        <Folder size={32} style={{ color: '#898AC4' }} />
       </div>
       <span className="text-black dark:text-white text-sm font-medium text-center drop-shadow-lg">
         {name}
