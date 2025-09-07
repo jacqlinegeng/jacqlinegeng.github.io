@@ -66,7 +66,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
       onClick={handleBackdropClick}
     >
-      <div className={`bg-gray-900/90 backdrop-blur-xl rounded-xl border border-white/20 w-full max-w-md mx-4 transition-all duration-300 ${isMinimized ? 'h-12 overflow-hidden' : ''}`}>
+      <div className={`bg-background backdrop-blur-xl rounded-xl border border-white/20 w-full max-w-md mx-4 transition-all duration-300 ${isMinimized ? 'h-12 overflow-hidden' : ''}`}>
         {/* Window Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
           <div className="flex items-center space-x-2">
