@@ -82,7 +82,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             ></button>
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
           </div>
-          <h2 className="text-white font-medium">Messages</h2>
+          <h2 className="text-card-foreground font-medium">Messages</h2>
           <div className="w-16"></div>
         </div>
 
@@ -90,8 +90,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         {!isMinimized && (
           <div className="p-6">
             <div className="mb-6">
-              <h3 className="text-white text-lg font-semibold mb-2">Get in Touch</h3>
-              <p className="text-white/70 text-sm">Send me a message & leave your contact info, and I'll get back to you soon!</p>
+              <h3 className="text-card-foreground text-lg font-semibold mb-2">Get in Touch</h3>
+              <p className="text-muted-foreground text-sm">Send me a message & leave your contact info, and I'll get back to you soon!</p>
             </div>
 
             {/* Status Messages */}
@@ -114,7 +114,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
+                  className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary"
                   required
                   disabled={isSubmitting}
                 />
@@ -125,7 +125,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
+                  className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary"
                   required
                   disabled={isSubmitting}
                 />
@@ -136,7 +136,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
-                  className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-400 resize-none"
+                  className="w-full px-4 py-2 bg-input border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary"
                   required
                   disabled={isSubmitting}
                 />
