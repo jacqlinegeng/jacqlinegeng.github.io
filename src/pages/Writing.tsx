@@ -160,11 +160,12 @@ At its core, the Bay’s culture blends ancient wisdom with modern systems think
 
             <div className="flex h-[70vh]">
               {/* Sidebar with notes list */}
-              <div className="w-1/3 border-r border-border bg-secondary">
+              {/* Sidebar with notes list */}
+              <div className="w-1/3 border-r border-border bg-secondary flex flex-col">
                 <div className="p-4 border-b border-border">
-                  <h2 className="font-semibold text-secondary-foreground">All Notes</h2>
+                  <h2 className="font-semibold text-secondary-foreground">ALl Notes</h2>
                 </div>
-                <div className="overflow-y-auto">
+                <div className="flex-1 overflow-y-auto">
                   {notes.map((note, index) => (
                     <div
                       key={index}
@@ -178,22 +179,35 @@ At its core, the Bay’s culture blends ancient wisdom with modern systems think
                     </div>
                   ))}
                 </div>
+                <div className="p-4 border-t border-border">
+                  <p className="text-sm text-muted-foreground text-right">
+                    read more at{' '}
+                    <a
+                      href="https://incosmicdust.substack.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      [jacqline's substack]
+                    </a>
+                  </p>
+                </div>
               </div>
 
               {/* Main content area */}
               <div className="flex-1 overflow-y-auto">
                 <div className="p-8">
-  <div className="prose max-w-none">
-    <div className="whitespace-pre-wrap font-sans text-card-foreground leading-relaxed">
-      {parseContent(notes[selectedNote].content)}
-    </div>
-    <div className="mt-8 pt-4 border-t border-border">
-      <p className="text-sm text-muted-foreground">
-        copyright © Jacqline G
-      </p>
-    </div>
-  </div>
-</div>
+                  <div className="prose max-w-none">
+                    <div className="whitespace-pre-wrap font-sans text-card-foreground leading-relaxed">
+                      {parseContent(notes[selectedNote].content)}
+                    </div>
+                    <div className="mt-8 pt-4 border-t border-border">
+                      <p className="text-sm text-muted-foreground">
+                        copyright © Jacqline G
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
