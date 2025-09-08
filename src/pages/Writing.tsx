@@ -38,7 +38,7 @@ Jupyter Notebooks, meanwhile, remain an unsung hero. They transform research not
     {
       title: "deeper dive on reinforcement learning in credit risk modeling",
       date: "june 23, 2025",
-      preview: "Thoughts on writing maintainable and readable code...",
+      preview: "thoughts on RL in credik risk assessment...",
       content: `# Reinforcement Learning for Credit Risk
 
 Building a deep learning model for credit risk assessment merges cutting-edge AI with practical finance, yielding real improvements in predicting loan defaults and managing risk. Recent research leverages complex neural architectures, advanced preprocessing, and novel reinforcement learning strategies to raise both accuracy and transparency in loan decision-making.
@@ -66,33 +66,18 @@ Sources
 3. [Reinforcement Learning in Credit Scoring and Underwriting - arXiv](https://arxiv.org/html/2212.07632v2)`
     },
     {
-      title: "Building Inclusive Web Experiences",
-      date: "June 5, 2024",
-      preview: "Why accessibility should be at the core of every project...",
-      content: `# Building Inclusive Web Experiences
+      title: "speed of iteration matters more than genius of idea",
+      date: "march 30, 2024",
+      preview: "ancient wisdom applied in the art of iteration...",
+      content: `# Speed of iteration sometimes beats the genius of idea
 
-The web should be accessible to everyone, regardless of their abilities or circumstances.
+What makes the Bay Area more interesting and filled with brilliant minds is its speed of iteration. I’ve seen this mindset more concentrated in San Francisco and the Bay Area than anywhere else. Iteration here isn’t just a buzzword, it’s a way of life. Founders launch bold experiments with the full expectation that many of them won’t work, but every setback is treated as a data point, not a defeat. It echoes the Stoic principle that the obstacle is the way. I’ve watched people treat a product hiccup or a market stumble not as something shameful, but as raw material to learn from and build on. Failure doesn’t freeze them. It pushes them forward.
 
-## Why Accessibility Matters
+The speed of iteration in the Bay can feel surreal. Investors ask for weekly updates, users give feedback in real time, and entire teams pivot in a single afternoon. I’ve been struck by how natural it feels for people here to release something rough, learn, and then reshape it overnight. It reminds me of Heraclitus’ idea that everything flows and nothing stands still. The culture accepts impermanence as a constant, much like Zen philosophy, where nothing is ever finished, only carried forward. Nietzsche would have called this an affirmation of becoming, embracing the chaos of creation rather than clinging to a finished state.
 
-Accessibility isn't just about compliance - it's about empathy. When we build accessible websites, we create experiences that work for everyone.
+Outside the Bay, I’ve noticed things move differently. In Europe or Asia, founders often spend weeks debating pivots that would be executed in hours in San Francisco. There’s more fear of reputational risk, more pressure to avoid failure. The result is incremental change rather than bold leaps. By contrast, the Bay romanticizes the crash and rebuild cycle. Even mistakes are turned into origin myths. Twitter started from a failed podcasting project, Slack from a failed game. That willingness to risk collapse creates the space for reinvention.
 
-## Key Principles
-
-- **Perceivable** - Information must be presentable in ways users can perceive
-- **Operable** - Interface components must be operable by all users
-- **Understandable** - Information and UI operation must be understandable
-- **Robust** - Content must be robust enough for various assistive technologies
-
-## Practical Steps
-
-1. Use semantic HTML
-2. Provide alternative text for images
-3. Ensure keyboard navigation
-4. Maintain sufficient color contrast
-5. Test with screen readers
-
-Building inclusive experiences makes the web better for everyone.`
+At its core, the Bay’s culture blends ancient wisdom with modern systems thinking. Kierkegaard once said that to dare is to lose one’s footing momentarily, but not to dare is to lose oneself. Karl Popper’s philosophy of falsification also fits here: progress comes not from proving we’re right, but from disproving what doesn’t work. Nassim Taleb would call it antifragility, the ability to grow stronger through volatility and stress. In San Francisco, that translates into a culture that charges into uncertainty, adapts quickly, and turns every failure into a foundation for the next idea.`
     }
   ];
 
@@ -198,12 +183,17 @@ Building inclusive experiences makes the web better for everyone.`
               {/* Main content area */}
               <div className="flex-1 overflow-y-auto">
                 <div className="p-8">
-                  <div className="prose max-w-none">
-                    <div className="whitespace-pre-wrap font-sans text-card-foreground leading-relaxed">
-                      {parseContent(notes[selectedNote].content)}
-                    </div>
-                  </div>
-                </div>
+  <div className="prose max-w-none">
+    <div className="whitespace-pre-wrap font-sans text-card-foreground leading-relaxed">
+      {parseContent(notes[selectedNote].content)}
+    </div>
+    <div className="mt-8 pt-4 border-t border-border">
+      <p className="text-sm text-muted-foreground">
+        copyright © Jacqline G
+      </p>
+    </div>
+  </div>
+</div>
               </div>
             </div>
           </div>
