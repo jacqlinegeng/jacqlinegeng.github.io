@@ -78,17 +78,17 @@ const Reading = () => {
             </div>
 
             {/* Header */}
-            <div className="text-center py-6 border-b border-border">
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <BookOpen className="w-6 h-6 text-cyan-500 dark:text-cyan-400" />
-                <h1 className="text-2xl font-bold text-foreground">Reading Journey</h1>
-                <Sparkles className="w-6 h-6 text-pink-500 dark:text-pink-400" />
+            <div className="text-center py-3 border-b border-border">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <BookOpen className="w-5 h-5 text-cyan-500 dark:text-cyan-400" />
+                <h1 className="text-lg font-bold text-foreground">Reading Journey</h1>
+                <Sparkles className="w-5 h-5 text-pink-500 dark:text-pink-400" />
               </div>
-              <p className="text-sm text-muted-foreground">Books that shape my thinking</p>
+              <p className="text-xs text-muted-foreground">Books that shape my thinking</p>
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-4">
           {loading ? (
             <div className="flex items-center justify-center h-64">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500"></div>
@@ -99,34 +99,30 @@ const Reading = () => {
               <p className="text-xl text-muted-foreground">No books yet. Start your reading journey!</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
               {/* Currently Reading Section */}
-              <div className="lg:col-span-2">
-                <div className="bg-secondary/50 border border-border rounded-2xl p-4 mb-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <h2 className="text-lg font-semibold text-card-foreground">Currently Reading</h2>
+              <div>
+                <div className="bg-secondary/50 border border-border rounded-xl p-3">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                    <h2 className="text-sm font-semibold text-card-foreground">Currently Reading</h2>
                   </div>
 
                   {currentlyReading.length === 0 ? (
-                    <p className="text-muted-foreground">No books currently being read</p>
+                    <p className="text-xs text-muted-foreground">No books currently being read</p>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-2">
                       {currentlyReading.map((book) => (
                         <div
                           key={book.id}
                           onClick={() => setSelectedBook(book)}
-                          className={`group cursor-pointer transition-all duration-300 ${
-                            selectedBook?.id === book.id
-                              ? "scale-105"
-                              : "hover:scale-102"
-                          }`}
+                          className="group cursor-pointer"
                         >
-                          <div className="bg-secondary/50 border border-border rounded-xl p-4 hover:border-cyan-500/50 transition-colors">
-                            <div className="flex gap-4">
+                          <div className="bg-secondary/30 hover:bg-secondary/50 border border-transparent hover:border-cyan-500/50 rounded-lg p-2 transition-colors">
+                            <div className="flex gap-2">
                               {/* Book Cover */}
                               <div className="relative flex-shrink-0">
-                                <div className="w-24 h-32 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
+                                <div className="w-14 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded flex items-center justify-center overflow-hidden">
                                   {book.cover_url ? (
                                     <img
                                       src={book.cover_url}
@@ -134,139 +130,140 @@ const Reading = () => {
                                       className="w-full h-full object-cover"
                                     />
                                   ) : (
-                                    <BookOpen className="w-12 h-12 text-cyan-500" />
+                                    <BookOpen className="w-6 h-6 text-cyan-500" />
                                   )}
-                                </div>
-                                <div className="absolute -top-2 -right-2 w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center shadow-lg">
-                                  <Sparkles className="w-4 h-4 text-white" />
                                 </div>
                               </div>
 
                               {/* Book Info */}
                               <div className="flex-1 min-w-0">
-                                <h3 className="text-base font-semibold text-card-foreground mb-1 truncate">
+                                <h3 className="text-xs font-semibold text-card-foreground mb-0.5 line-clamp-2">
                                   {book.title}
                                 </h3>
-                                <p className="text-xs text-muted-foreground mb-2">
+                                <p className="text-[10px] text-muted-foreground mb-1.5 truncate">
                                   by {book.author}
                                 </p>
 
                                 {/* Progress Bar */}
-                                <div className="space-y-2">
-                                  <div className="flex items-center justify-between text-sm">
+                                <div className="space-y-1">
+                                  <div className="flex items-center justify-between text-[10px]">
                                     <span className="text-muted-foreground">Progress</span>
                                     <span className="font-semibold text-cyan-500">
                                       {book.progress}%
                                     </span>
                                   </div>
-                                  <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
+                                  <div className="w-full h-1.5 bg-secondary rounded-full overflow-hidden">
                                     <div
-                                      className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-500 relative"
+                                      className="h-full bg-gradient-to-r from-cyan-500 to-blue-500"
                                       style={{ width: `${book.progress}%` }}
-                                    >
-                                      <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
-                                    </div>
+                                    ></div>
                                   </div>
                                 </div>
-
-                                {book.started_date && (
-                                  <div className="flex items-center gap-2 mt-3 text-xs text-muted-foreground">
-                                    <Clock className="w-3 h-3" />
-                                    <span>Started {new Date(book.started_date).toLocaleDateString()}</span>
-                                  </div>
-                                )}
                               </div>
                             </div>
-
-                            {/* Notes Preview */}
-                            {book.notes && (
-                              <div className="mt-4 pt-4 border-t border-border">
-                                <p className="text-sm text-muted-foreground italic line-clamp-2">
-                                  "{book.notes}"
-                                </p>
-                              </div>
-                            )}
                           </div>
                         </div>
                       ))}
                     </div>
                   )}
                 </div>
-
-                {/* Completed Books */}
-                {completed.length > 0 && (
-                  <div className="bg-secondary/50 border border-border rounded-2xl p-4">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <h2 className="text-lg font-semibold text-card-foreground">Completed</h2>
-                      <span className="ml-auto text-xs text-muted-foreground">{completed.length} books</span>
-                    </div>
-
-                    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-4">
-                      {completed.map((book) => (
-                        <div
-                          key={book.id}
-                          onClick={() => setSelectedBook(book)}
-                          className="group cursor-pointer"
-                        >
-                          <div className="relative aspect-[2/3] bg-gradient-to-br from-green-400/20 to-cyan-400/20 rounded-lg flex items-center justify-center shadow-md hover:shadow-xl transition-all hover:scale-105 overflow-hidden">
-                            {book.cover_url ? (
-                              <img
-                                src={book.cover_url}
-                                alt={book.title}
-                                className="w-full h-full object-cover"
-                              />
-                            ) : (
-                              <BookOpen className="w-8 h-8 text-green-500" />
-                            )}
-                          </div>
-                          <p className="text-xs text-center mt-2 text-muted-foreground truncate">
-                            {book.title}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
 
-              {/* Sidebar - Want to Read */}
-              <div className="lg:col-span-1">
-                <div className="bg-secondary/50 border border-border rounded-2xl p-4 sticky top-24">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                    <h2 className="text-base font-semibold text-card-foreground">Want to Read</h2>
+              {/* Want to Read Section */}
+              <div>
+                <div className="bg-secondary/50 border border-border rounded-xl p-3">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-1.5 h-1.5 bg-pink-500 rounded-full"></div>
+                    <h2 className="text-sm font-semibold text-card-foreground">Want to Read</h2>
                   </div>
 
                   {wantToRead.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">No books in the queue</p>
+                    <p className="text-xs text-muted-foreground">No books in the queue</p>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-2">
                       {wantToRead.map((book) => (
                         <div
                           key={book.id}
                           onClick={() => setSelectedBook(book)}
                           className="group cursor-pointer"
                         >
-                          <div className="flex gap-3 p-3 bg-secondary/30 hover:bg-secondary/50 rounded-lg transition-colors border border-transparent hover:border-pink-500/50">
-                            <div className="w-12 h-16 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
-                              {book.cover_url ? (
-                                <img
-                                  src={book.cover_url}
-                                  alt={book.title}
-                                  className="w-full h-full object-cover"
-                                />
-                              ) : (
-                                <BookOpen className="w-6 h-6 text-pink-500" />
-                              )}
+                          <div className="bg-secondary/30 hover:bg-secondary/50 rounded-lg p-2 transition-colors border border-transparent hover:border-pink-500/50">
+                            <div className="flex gap-2">
+                              <div className="w-14 h-20 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                {book.cover_url ? (
+                                  <img
+                                    src={book.cover_url}
+                                    alt={book.title}
+                                    className="w-full h-full object-cover"
+                                  />
+                                ) : (
+                                  <BookOpen className="w-6 h-6 text-pink-500" />
+                                )}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-xs font-semibold text-card-foreground line-clamp-2">
+                                  {book.title}
+                                </h4>
+                                <p className="text-[10px] text-muted-foreground truncate">
+                                  {book.author}
+                                </p>
+                              </div>
                             </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-medium text-card-foreground truncate">
-                                {book.title}
-                              </h4>
-                              <p className="text-xs text-muted-foreground truncate">
-                                {book.author}
-                              </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Completed Books Section */}
+              <div>
+                <div className="bg-secondary/50 border border-border rounded-xl p-3">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                    <h2 className="text-sm font-semibold text-card-foreground">Completed</h2>
+                    {completed.length > 0 && (
+                      <span className="ml-auto text-[10px] text-muted-foreground">{completed.length}</span>
+                    )}
+                  </div>
+
+                  {completed.length === 0 ? (
+                    <p className="text-xs text-muted-foreground">No completed books</p>
+                  ) : (
+                    <div className="space-y-2">
+                      {completed.map((book) => (
+                        <div
+                          key={book.id}
+                          onClick={() => setSelectedBook(book)}
+                          className="group cursor-pointer"
+                        >
+                          <div className="bg-secondary/30 hover:bg-secondary/50 rounded-lg p-2 transition-colors border border-transparent hover:border-green-500/50">
+                            <div className="flex gap-2">
+                              <div className="w-14 h-20 bg-gradient-to-br from-green-400/20 to-cyan-400/20 rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                {book.cover_url ? (
+                                  <img
+                                    src={book.cover_url}
+                                    alt={book.title}
+                                    className="w-full h-full object-cover"
+                                  />
+                                ) : (
+                                  <BookOpen className="w-6 h-6 text-green-500" />
+                                )}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-xs font-semibold text-card-foreground line-clamp-2">
+                                  {book.title}
+                                </h4>
+                                <p className="text-[10px] text-muted-foreground truncate">
+                                  {book.author}
+                                </p>
+                                {book.completed_date && (
+                                  <p className="text-[10px] text-muted-foreground mt-1">
+                                    {new Date(book.completed_date).toLocaleDateString()}
+                                  </p>
+                                )}
+                              </div>
                             </div>
                           </div>
                         </div>
