@@ -64,12 +64,25 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <TopMenuBar />
-      
+
       <div className="pt-8 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Stories Grid */}
-          <div className="bg-card border-border text-card-foreground rounded-xl shadow-lg border p-6">
-            <h2 className="text-2xl font-bold mb-6">My Projects</h2>
+          {/* Mac OS Window */}
+          <div className="bg-card border-border text-card-foreground rounded-xl shadow-lg border">
+            {/* Mac OS Header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <h1 className="text-lg font-semibold text-card-foreground">Projects</h1>
+              <div className="w-16"></div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-6">My Projects</h2>
             
             {/* Stories Row */}
             <div className="flex space-x-4 mb-8 overflow-x-auto pb-4">
@@ -129,6 +142,7 @@ const Projects = () => {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>

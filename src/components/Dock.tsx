@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
-import { Home, Zap, PenTool, MessageSquare, Music } from "lucide-react";
+import { Home, Zap, PenTool, MessageSquare, Music, BookOpen } from "lucide-react";
 
 const Dock = () => {
   const navigate = useNavigate();
@@ -9,29 +9,34 @@ const Dock = () => {
   const [showContact, setShowContact] = useState(false);
 
   const dockItems = [
-    { 
-      name: "Home", 
-      icon: <Home size={20} className="text-white" />, 
+    {
+      name: "Home",
+      icon: <Home size={20} className="text-white" />,
       action: () => navigate("/")
     },
-    { 
-      name: "Projects", 
-      icon: <Zap size={20} className="text-white" />, 
+    {
+      name: "Projects",
+      icon: <Zap size={20} className="text-white" />,
       action: () => navigate("/projects")
     },
-    { 
-      name: "Writing", 
-      icon: <PenTool size={20} className="text-white" />, 
+    {
+      name: "Writing",
+      icon: <PenTool size={20} className="text-white" />,
       action: () => navigate("/writing")
     },
-    { 
-      name: "Messages", 
-      icon: <MessageSquare size={20} className="text-white" />, 
+    {
+      name: "Reading",
+      icon: <BookOpen size={20} className="text-white" />,
+      action: () => navigate("/reading")
+    },
+    {
+      name: "Messages",
+      icon: <MessageSquare size={20} className="text-white" />,
       action: () => setShowContact(true)
     },
-    { 
-      name: "Spotify", 
-      icon: <Music size={20} className="text-white" />, 
+    {
+      name: "Spotify",
+      icon: <Music size={20} className="text-white" />,
       action: () => window.open("https://open.spotify.com/user/22uvhgmtzptpdu5q734fqbzqi?si=36328d1b344c4e6e", "_blank")
     }
   ];

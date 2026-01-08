@@ -63,16 +63,35 @@ const Reading = () => {
 
       <div className="pt-8 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <BookOpen className="w-8 h-8 text-cyan-500 dark:text-cyan-400" />
-              <h1 className="text-4xl font-bold text-foreground">Reading Journey</h1>
-              <Sparkles className="w-8 h-8 text-pink-500 dark:text-pink-400" />
+          {/* Mac OS Window */}
+          <div className="bg-card border-border rounded-xl shadow-2xl border">
+            {/* Mac OS Header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div className="flex-1 mx-4">
+                <div className="bg-background rounded-md px-3 py-1 text-sm text-foreground border border-border text-center">
+                  reading://list
+                </div>
+              </div>
+              <div className="w-16"></div>
             </div>
-            <p className="text-muted-foreground">Books that shape my thinking</p>
-          </div>
 
+            {/* Header */}
+            <div className="text-center py-8 border-b border-border">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <BookOpen className="w-8 h-8 text-cyan-500 dark:text-cyan-400" />
+                <h1 className="text-4xl font-bold text-foreground">Reading Journey</h1>
+                <Sparkles className="w-8 h-8 text-pink-500 dark:text-pink-400" />
+              </div>
+              <p className="text-muted-foreground">Books that shape my thinking</p>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
           {loading ? (
             <div className="flex items-center justify-center h-64">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500"></div>
@@ -86,7 +105,7 @@ const Reading = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Currently Reading Section */}
               <div className="lg:col-span-2">
-                <div className="bg-card border border-border rounded-2xl p-6 shadow-xl mb-6">
+                <div className="bg-secondary/50 border border-border rounded-2xl p-6 mb-6">
                   <div className="flex items-center gap-2 mb-6">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     <h2 className="text-2xl font-semibold text-card-foreground">Currently Reading</h2>
@@ -179,7 +198,7 @@ const Reading = () => {
 
                 {/* Completed Books */}
                 {completed.length > 0 && (
-                  <div className="bg-card border border-border rounded-2xl p-6 shadow-xl">
+                  <div className="bg-secondary/50 border border-border rounded-2xl p-6">
                     <div className="flex items-center gap-2 mb-6">
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <h2 className="text-2xl font-semibold text-card-foreground">Completed</h2>
@@ -216,7 +235,7 @@ const Reading = () => {
 
               {/* Sidebar - Want to Read */}
               <div className="lg:col-span-1">
-                <div className="bg-card border border-border rounded-2xl p-6 shadow-xl sticky top-24">
+                <div className="bg-secondary/50 border border-border rounded-2xl p-6 sticky top-24">
                   <div className="flex items-center gap-2 mb-6">
                     <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
                     <h2 className="text-xl font-semibold text-card-foreground">Want to Read</h2>
@@ -261,6 +280,8 @@ const Reading = () => {
               </div>
             </div>
           )}
+            </div>
+          </div>
 
           {/* Book Details Modal */}
           {selectedBook && (
