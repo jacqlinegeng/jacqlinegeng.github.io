@@ -17,37 +17,56 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 dark:from-black dark:via-gray-950 dark:to-black relative overflow-hidden">
       {/* Animated Vision Board Background */}
       <VisionBoard />
 
-      {/* Creative Animated Background */}
+      {/* Tech-Inspired Dark Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Flowing waves with neon glow */}
+        {/* Digital grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)]"></div>
+
+        {/* Glowing orbs with neon effect */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 -left-1/4 w-[800px] h-[800px] bg-cyan-400/15 dark:bg-cyan-400/25 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-pink-400/15 dark:bg-pink-400/25 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
-            <div className="absolute bottom-1/4 left-1/3 w-[700px] h-[700px] bg-blue-400/15 dark:bg-blue-400/25 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
-          </div>
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-[128px] animate-pulse" style={{ animationDuration: '8s' }}></div>
+          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[128px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[128px] animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }}></div>
         </div>
 
-        {/* Floating particles */}
-        <div className="absolute top-1/4 left-1/5 w-2 h-2 bg-cyan-400/40 rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
-        <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-pink-400/40 rounded-full animate-ping" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-2/3 w-2 h-2 bg-blue-400/40 rounded-full animate-ping" style={{ animationDuration: '5s', animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-cyan-400/40 rounded-full animate-ping" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
+        {/* Scanning lines effect */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent animate-pulse" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
+          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/50 to-transparent animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }}></div>
+        </div>
 
-        {/* Diagonal light streaks */}
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent transform -skew-x-12 animate-pulse" style={{ animationDuration: '6s' }}></div>
-        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-pink-400/30 to-transparent transform skew-x-12 animate-pulse" style={{ animationDuration: '7s', animationDelay: '2s' }}></div>
+        {/* Circuit board pattern */}
+        <div className="absolute top-10 left-10 w-32 h-32 border border-cyan-500/20 rounded-lg"></div>
+        <div className="absolute top-12 left-12 w-4 h-4 bg-cyan-500/30 rounded-full blur-sm"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 border border-blue-500/20 rounded-lg rotate-45"></div>
+        <div className="absolute bottom-24 right-24 w-4 h-4 bg-blue-500/30 rounded-full blur-sm"></div>
 
-        {/* Subtle mesh gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-pink-400/5 dark:from-cyan-400/10 dark:to-pink-400/10"></div>
+        {/* Floating data particles */}
+        <div className="absolute top-1/4 left-1/5 w-1 h-1 bg-cyan-400 rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-ping" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-2/3 w-1 h-1 bg-teal-400 rounded-full animate-ping" style={{ animationDuration: '5s', animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
+        <div className="absolute top-1/6 right-1/5 w-1 h-1 bg-blue-400 rounded-full animate-ping" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}></div>
+
+        {/* Diagonal tech lines */}
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-500/40 to-transparent transform -skew-x-12"></div>
+        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-blue-500/40 to-transparent transform skew-x-12"></div>
+
+        {/* Holographic gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent via-transparent to-blue-500/5"></div>
+
+        {/* Noise texture for depth */}
+        <div className="absolute inset-0 opacity-20 mix-blend-soft-light"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          }}
+        ></div>
       </div>
-
-      {/* macOS Wallpaper Effect */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23000000%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] dark:bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
       <TopMenuBar />
 
