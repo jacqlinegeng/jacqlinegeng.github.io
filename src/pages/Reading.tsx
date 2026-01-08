@@ -40,9 +40,6 @@ const Reading = () => {
       console.error("Error fetching books:", error);
     } else {
       setBooks(data || []);
-      if (data && data.length > 0) {
-        setSelectedBook(data[0]);
-      }
     }
     setLoading(false);
   };
@@ -81,13 +78,13 @@ const Reading = () => {
             </div>
 
             {/* Header */}
-            <div className="text-center py-8 border-b border-border">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <BookOpen className="w-8 h-8 text-cyan-500 dark:text-cyan-400" />
-                <h1 className="text-4xl font-bold text-foreground">Reading Journey</h1>
-                <Sparkles className="w-8 h-8 text-pink-500 dark:text-pink-400" />
+            <div className="text-center py-6 border-b border-border">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <BookOpen className="w-6 h-6 text-cyan-500 dark:text-cyan-400" />
+                <h1 className="text-2xl font-bold text-foreground">Reading Journey</h1>
+                <Sparkles className="w-6 h-6 text-pink-500 dark:text-pink-400" />
               </div>
-              <p className="text-muted-foreground">Books that shape my thinking</p>
+              <p className="text-sm text-muted-foreground">Books that shape my thinking</p>
             </div>
 
             {/* Content */}
@@ -105,10 +102,10 @@ const Reading = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Currently Reading Section */}
               <div className="lg:col-span-2">
-                <div className="bg-secondary/50 border border-border rounded-2xl p-6 mb-6">
-                  <div className="flex items-center gap-2 mb-6">
+                <div className="bg-secondary/50 border border-border rounded-2xl p-4 mb-4">
+                  <div className="flex items-center gap-2 mb-4">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <h2 className="text-2xl font-semibold text-card-foreground">Currently Reading</h2>
+                    <h2 className="text-lg font-semibold text-card-foreground">Currently Reading</h2>
                   </div>
 
                   {currentlyReading.length === 0 ? (
@@ -147,10 +144,10 @@ const Reading = () => {
 
                               {/* Book Info */}
                               <div className="flex-1 min-w-0">
-                                <h3 className="text-xl font-semibold text-card-foreground mb-1 truncate">
+                                <h3 className="text-base font-semibold text-card-foreground mb-1 truncate">
                                   {book.title}
                                 </h3>
-                                <p className="text-sm text-muted-foreground mb-3">
+                                <p className="text-xs text-muted-foreground mb-2">
                                   by {book.author}
                                 </p>
 
@@ -198,11 +195,11 @@ const Reading = () => {
 
                 {/* Completed Books */}
                 {completed.length > 0 && (
-                  <div className="bg-secondary/50 border border-border rounded-2xl p-6">
-                    <div className="flex items-center gap-2 mb-6">
+                  <div className="bg-secondary/50 border border-border rounded-2xl p-4">
+                    <div className="flex items-center gap-2 mb-4">
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <h2 className="text-2xl font-semibold text-card-foreground">Completed</h2>
-                      <span className="ml-auto text-sm text-muted-foreground">{completed.length} books</span>
+                      <h2 className="text-lg font-semibold text-card-foreground">Completed</h2>
+                      <span className="ml-auto text-xs text-muted-foreground">{completed.length} books</span>
                     </div>
 
                     <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-4">
@@ -235,10 +232,10 @@ const Reading = () => {
 
               {/* Sidebar - Want to Read */}
               <div className="lg:col-span-1">
-                <div className="bg-secondary/50 border border-border rounded-2xl p-6 sticky top-24">
-                  <div className="flex items-center gap-2 mb-6">
+                <div className="bg-secondary/50 border border-border rounded-2xl p-4 sticky top-24">
+                  <div className="flex items-center gap-2 mb-4">
                     <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                    <h2 className="text-xl font-semibold text-card-foreground">Want to Read</h2>
+                    <h2 className="text-base font-semibold text-card-foreground">Want to Read</h2>
                   </div>
 
                   {wantToRead.length === 0 ? (

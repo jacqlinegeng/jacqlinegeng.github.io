@@ -79,7 +79,11 @@ const Writing = () => {
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              <h1 className="text-lg font-semibold text-card-foreground">Writing</h1>
+              <div className="flex-1 mx-4">
+                <div className="bg-background rounded-md px-3 py-1 text-sm text-foreground border border-border text-center">
+                  writing://notes
+                </div>
+              </div>
               <div className="w-16"></div>
             </div>
 
