@@ -2,12 +2,6 @@ import { useState, useEffect } from "react";
 import TopMenuBar from "../components/TopMenuBar";
 import Dock from "../components/Dock";
 import { BookOpen, Sparkles, Clock } from "lucide-react";
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
 
 interface Book {
   id: string;
@@ -26,23 +20,11 @@ const Reading = () => {
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchBooks();
-  }, []);
+useEffect(() => {
+  setBooks([]);
+  setLoading(false);
+}, []);
 
-  const fetchBooks = async () => {
-    const { data, error } = await supabase
-      .from("reading_list")
-      .select("*")
-      .order("created_at", { ascending: false });
-
-    if (error) {
-      console.error("Error fetching books:", error);
-    } else {
-      setBooks(data || []);
-    }
-    setLoading(false);
-  };
 
   const currentlyReading = books.filter((book) => book.status === "currently_reading");
   const wantToRead = books.filter((book) => book.status === "want_to_read");
