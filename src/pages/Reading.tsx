@@ -137,6 +137,105 @@ const HARDCODED_BOOKS: Book[] = [
     started_date: "2023-08-15",
     completed_date: "2023-09-20"
   },
+  {
+    id: "12",
+    title: "Surely You're Joking, Mr. Feynman!",
+    author: "Richard Feynman",
+    progress: 3,
+    status: "currently_reading",
+    notes: "An entertaining collection of anecdotes from the life of the brilliant physicist Richard Feynman. His curiosity and humor are infectious.",
+    cover_url: "https://m.media-amazon.com/images/I/71x3shLRNFL._SY522_.jpg",
+    started_date: "2023-08-15",
+    completed_date: null
+  },
+  {
+    id: "13",
+    title: "A Woman Makes a Plan: Advice for a Lifetime of Adventure, Beauty, and Success",
+    author: "Maye Musk",
+    progress: 100,
+    status: "completed",
+    notes: "An empowering memoir filled with life lessons from Maye Musk. Her journey is a testament to resilience and reinvention.",
+    cover_url: "https://m.media-amazon.com/images/I/71O5zxF0iNL._AC_UF1000,1000_QL80_.jpg",
+    started_date: "2024-08-15",
+    completed_date: "2025-05-10"
+  },
+  {
+    id: "14",
+    title: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    progress: 100,
+    status: "completed",
+    notes: "A refreshing take on self-help that emphasizes embracing life's challenges. Mark Manson's blunt honesty is both humorous and insightful.",
+    cover_url: "https://m.media-amazon.com/images/I/71QKQ9mwV7L._AC_UF1000,1000_QL80_.jpg",
+    started_date: "2023-08-15",
+    completed_date: "2023-09-05"
+  }, 
+  {
+    id: "15",
+    title: "The Defining Decade: Why Your Twenties Matter--And How to Make the Most of Them Now",
+    author: "Meg Jay",
+    progress: 100,
+    status: "completed",
+    notes: "An essential read for anyone in their twenties. Meg Jay provides practical advice on making the most of this pivotal decade.",
+    cover_url: "https://m.media-amazon.com/images/I/812pT1QRzUL._AC_UF1000,1000_QL80_.jpg",
+    started_date: "2023-02-15",
+    completed_date: "2023-03-05"
+  },
+    {
+    id: "16",
+    title: "The Algebra of Wealth:A Simple Formula for Financial Security",
+    author: "Scott Galloway",
+    progress: 12,
+    status: "currently_reading",
+    notes: "A concise guide to achieving financial security through smart decision-making. Scott Galloway breaks down complex concepts into actionable steps.",
+    cover_url: "https://m.media-amazon.com/images/I/71twg9q6bEL._AC_UF1000,1000_QL80_.jpg",
+    started_date: "2023-02-15",
+    completed_date: null
+  },
+      {
+    id: "17",
+    title: "AI Engineering",
+    author: "Chip Huyen",
+    progress: 20,
+    status: "currently_reading",
+    notes: "A practical guide to building and deploying AI systems. Chip Huyen provides valuable insights into the engineering challenges of AI.",
+    cover_url: "https://m.media-amazon.com/images/I/815KH9GjFTL._AC_UF1000,1000_QL80_.jpg",
+    started_date: "2023-02-15",
+    completed_date: null
+  },
+        {
+    id: "18",
+    title: "The Untethered Soul: The Journey Beyond Yourself",
+    author: "Michael A. Singer",
+    progress: 6,
+    status: "currently_reading",
+    notes: "An enlightening exploration of consciousness and self-awareness. Michael A. Singer offers profound insights into achieving inner peace.",
+    cover_url: "https://m.media-amazon.com/images/I/61dSHZxYdtL._AC_UF1000,1000_QL80_.jpg",
+    started_date: "2023-02-15",
+    completed_date: null
+  },
+          {
+    id: "19",
+    title: "Principles",
+    author: "Ray Dalio",
+    progress: 12,
+    status: "currently_reading",
+    notes: "A comprehensive guide to life and work principles from the legendary investor Ray Dalio. A must-read for anyone looking to improve decision-making and achieve success.",
+    cover_url: "https://m.media-amazon.com/images/I/61LKD6scbfL.jpg",
+    started_date: "2023-02-15",
+    completed_date: null
+  },
+            {
+    id: "20",
+    title: "The Worlds I See",
+    author: "Dr. Fei-Fei Li",
+    progress: 9,
+    status: "currently_reading",
+    notes: "An inspiring memoir by AI pioneer Dr. Fei-Fei Li. Her journey from humble beginnings to leading advancements in artificial intelligence is truly motivational.",
+    cover_url: "https://m.media-amazon.com/images/I/81blPlUVdyL.jpg",
+    started_date: "2023-02-15",
+    completed_date: null
+  },
 ];
 
 const Reading = () => {
