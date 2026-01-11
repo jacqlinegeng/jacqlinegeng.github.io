@@ -23,7 +23,7 @@ const HARDCODED_BOOKS: Book[] = [
     progress: 65,
     status: "currently_reading",
     notes: "A fascinating dive into power dynamics. The historical examples bring each law to life.",
-    cover_url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442285524i/1303.jpg",
+    cover_url: "https://m.media-amazon.com/images/I/31RW8HQ31WL._SY445_SX342_.jpg",
     started_date: "2025-01-01",
     completed_date: null
   },
@@ -89,7 +89,7 @@ const HARDCODED_BOOKS: Book[] = [
     progress: 25,
     status: "currently_reading",
     notes: "Fascinating insights into Jensen Huang's leadership and Nvidia's rise to dominance in AI chips.",
-    cover_url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1724187255i/210071952.jpg",
+    cover_url: "https://m.media-amazon.com/images/I/515FVMiDWfL._SY445_SX342_.jpg",
     started_date: "2025-01-05",
     completed_date: null
   },
