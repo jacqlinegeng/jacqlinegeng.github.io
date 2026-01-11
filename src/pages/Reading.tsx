@@ -101,9 +101,42 @@ const HARDCODED_BOOKS: Book[] = [
     status: "completed",
     notes: "Life-changing wisdom on wealth and happiness. Naval's insights are timeless and practical.",
     cover_url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598011736i/54898389.jpg",
+    started_date: "2022-07-10",
+    completed_date: "2022-10-05"
+  },
+  {
+    id: "9",
+    title: "Quantum Mechanics: The Theoretical Minimum",
+    author: "Leonard Susskind & Art Friedman",
+    progress: 4,
+    status: "currently_reading",
+    notes: "A clear and concise introduction to quantum mechanics. A must-read for anyone interested in the subject.",
+    cover_url: "https://m.media-amazon.com/images/I/81Zk5MC9xfL._SY522_.jpg",
     started_date: "2024-09-10",
-    completed_date: "2024-10-01"
-  }
+    completed_date: null
+  },
+  {
+    id: "10",
+    title: "Superintelligence: Paths, Dangers, Strategies",
+    author: "Nick Bostrom",
+    progress: 3,
+    status: "currently_reading",
+    notes: "A thought-provoking exploration of the future of AI and its potential risks. Essential reading for understanding AI safety.",
+    cover_url: "https://m.media-amazon.com/images/I/814sKOe+BcL._SY522_.jpg",
+    started_date: "2024-09-10",
+    completed_date: null
+  },
+  {
+    id: "11",
+    title: "Steering by Starlight: The Science and Magic of Finding Your Way",
+    author: "Martha Beck",
+    progress: 100,
+    status: "completed",
+    notes: "An inspiring guide to navigating life's challenges using both science and intuition. A beautiful read on finding direction in life.",
+    cover_url: "https://images3.penguinrandomhouse.com/cover/9781605298641",
+    started_date: "2023-08-15",
+    completed_date: "2023-09-20"
+  },
 ];
 
 const Reading = () => {
