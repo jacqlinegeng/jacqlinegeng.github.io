@@ -153,7 +153,7 @@ const Reading = () => {
               {/* Book Shelf - Horizontal Scroll */}
               <div className="mb-10">
                 <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-medium">Book Shelf</h2>
-                <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+                <div className="flex gap-4 overflow-x-auto pb-4 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-secondary/50 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-muted-foreground/30 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-muted-foreground/50">
                   {books.map((book) => (
                     <div
                       key={book.id}
