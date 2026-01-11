@@ -81,6 +81,28 @@ const HARDCODED_BOOKS: Book[] = [
     cover_url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1447957962i/25744928.jpg",
     started_date: null,
     completed_date: null
+  },
+  {
+    id: "7",
+    title: "The Nvidia Way",
+    author: "Tae Kim",
+    progress: 25,
+    status: "currently_reading",
+    notes: "Fascinating insights into Jensen Huang's leadership and Nvidia's rise to dominance in AI chips.",
+    cover_url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1724187255i/210071952.jpg",
+    started_date: "2025-01-05",
+    completed_date: null
+  },
+  {
+    id: "8",
+    title: "The Almanack of Naval Ravikant",
+    author: "Eric Jorgenson",
+    progress: 100,
+    status: "completed",
+    notes: "Life-changing wisdom on wealth and happiness. Naval's insights are timeless and practical.",
+    cover_url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598011736i/54898389.jpg",
+    started_date: "2024-09-10",
+    completed_date: "2024-10-01"
   }
 ];
 
