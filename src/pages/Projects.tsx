@@ -10,28 +10,28 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, shopping cart, and payment processing.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "NeuroWealth",
+      description: "A fintech dashboard that tracks spending, savings, and investment behaviors through neural activity analysis. Provides insights into neuronal and mental states to optimize financial decision-making using EEG and fNIRS data.",
+      image: "https://images.unsplash.com/photo-1655720828018-eddac7b3bde0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tech: ["React", "Python", "TensorFlow", "fNIRS/EEG", "PostgreSQL"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative task management with real-time updates and team features. Built with modern web technologies for optimal performance.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tech: ["Vue.js", "Firebase", "WebSocket"],
+      title: "Vestibule",
+      description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
+      image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf35f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     },
     {
       id: 3,
-      title: "AI Dashboard",
-      description: "Analytics dashboard with machine learning insights and data visualization. Provides real-time analytics and predictive insights.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      tech: ["Python", "TensorFlow", "React", "D3.js"],
+      title: "NeuralViz",
+      description: "An AI-powered 3D visualization engine that transforms machine learning models and neural networks into interactive, immersive experiences. Uses Three.js and advanced ML techniques to visualize model architectures and real-time inference flows in 3D space.",
+      image: "https://images.unsplash.com/photo-1639762681033-6461502ae7ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      tech: ["Three.js", "React", "Python", "PyTorch", "WebGL"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     }
