@@ -12,7 +12,7 @@ const Projects = () => {
       id: 1,
       title: "NeuroWealth",
       description: "A fintech dashboard that tracks spending, savings, and investment behaviors through neural activity analysis. Provides insights into neuronal and mental states to optimize financial decision-making using EEG and fNIRS data.",
-      image: "https://images.pexels.com/photos/3962629/pexels-photo-3962629.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+      image: "https://images.pexels.com/photos/8369408/pexels-photo-8369408.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
       tech: ["React", "Python", "TensorFlow", "fNIRS/EEG", "PostgreSQL"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
@@ -21,7 +21,7 @@ const Projects = () => {
       id: 2,
       title: "Vestibule",
       description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
-      image: "https://images.pexels.com/photos/8369408/pexels-photo-8369408.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+      image: "https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
       tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
