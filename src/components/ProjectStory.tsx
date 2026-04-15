@@ -9,6 +9,7 @@ interface Project {
   tech: string[];
   username: string;
   avatar: string;
+  link?: string;
 }
 
 interface ProjectStoryProps {
@@ -150,10 +151,21 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
               <Bookmark size={24} fill={saved ? 'white' : 'none'} />
             </button>
           </div>
-          
-          <div className="text-white text-sm">
+
+          <div className="text-white text-sm mb-3">
             <span className="font-semibold">66 likes</span>
           </div>
+
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-white text-black py-2 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors"
+            >
+              View Project
+            </a>
+          )}
         </div>
       </div>
     </div>

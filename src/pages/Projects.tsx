@@ -21,7 +21,7 @@ const Projects = () => {
       id: 2,
       title: "Vestibule",
       description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
-      image: "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+      image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
       tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
@@ -94,7 +94,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <button
                   key={project.id}
-                  onClick={() => project.link ? window.open(project.link, '_blank') : handleStoryOpen(index)}
+                  onClick={() => handleStoryOpen(index)}
                   className="flex-shrink-0 group"
                 >
                   <div className="relative">
@@ -120,7 +120,7 @@ const Projects = () => {
                 <div
                   key={project.id}
                   className="bg-secondary rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
-                  onClick={() => project.link ? window.open(project.link, '_blank') : handleStoryOpen(projects.indexOf(project))}
+                  onClick={() => handleStoryOpen(projects.indexOf(project))}
                 >
                   <img
                     src={project.image}
