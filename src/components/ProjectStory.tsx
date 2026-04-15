@@ -161,7 +161,7 @@ const ProjectStory = ({ projects, currentIndex, onClose, onNext, onPrev }: Proje
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 rounded-lg font-semibold text-center hover:from-cyan-300 hover:to-blue-400 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="group w-full inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-gradient-to-r from-fuchsia-500/90 via-purple-500/90 to-indigo-500/90 py-3 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 active:translate-y-px"
             >
               View Project
             </a>

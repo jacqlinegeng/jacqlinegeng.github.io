@@ -12,16 +12,17 @@ const Projects = () => {
       id: 1,
       title: "NeuroWealth",
       description: "A fintech dashboard that tracks spending, savings, and investment behaviors through neural activity analysis. Provides insights into neuronal and mental states to optimize financial decision-making using EEG and fNIRS data.",
-      image: "/uploads/b56a6cb44777fc64cb738575b501d936.jpg",
+      image: "/uploads/b56a6cb44777fc64cb738575b501d936.png",
       tech: ["React", "Python", "TensorFlow", "fNIRS/EEG", "PostgreSQL"],
       username: "jacqlinegeng",
-      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      link: "https://github.com/jacqlinegeng/NeuroWealth"
     },
     {
       id: 2,
-      title: "Vestibull",
+      title: "Vestibule",
       description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
-      image: "/uploads/77880bf8deb75a8410d2891163ef1339.jpg",
+      image: "/uploads/77880bf8deb75a8410d2891163ef1339.png",
       tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
       username: "jacqlinegeng",
       avatar: "/uploads/zozo.png",
@@ -34,7 +35,8 @@ const Projects = () => {
       image: "/uploads/d9ecb1c9f0fbbfb8670d64d24285878a.jpg",
       tech: ["Three.js", "React", "Python", "PyTorch", "WebGL"],
       username: "jacqlinegeng",
-      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      link: "https://3dviz-animation.vercel.app/"
     }
   ];
 
@@ -144,6 +146,20 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
+
+                    {project.link && (
+                      <div className="mt-4">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center justify-center w-full rounded-md border border-white/10 bg-gradient-to-r from-fuchsia-500/90 via-purple-500/90 to-indigo-500/90 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:from-fuchsia-400/90 hover:via-purple-400/90 hover:to-indigo-400/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                        >
+                          View Project
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
