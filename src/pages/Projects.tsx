@@ -12,16 +12,16 @@ const Projects = () => {
       id: 1,
       title: "NeuroWealth",
       description: "A fintech dashboard that tracks spending, savings, and investment behaviors through neural activity analysis. Provides insights into neuronal and mental states to optimize financial decision-making using EEG and fNIRS data.",
-      image: "https://images.pexels.com/photos/8369408/pexels-photo-8369408.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+      image: "/uploads/b56a6cb44777fc64cb738575b501d936.jpg",
       tech: ["React", "Python", "TensorFlow", "fNIRS/EEG", "PostgreSQL"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
     },
     {
       id: 2,
-      title: "Vestibule",
+      title: "Vestibull",
       description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
-      image: "https://kitbash3d.com/products/cyberpunk?srsltid=AfmBOopt-GoWyEHf0IVeYLpdwQQIjf1kIRIPTEI58EXvP0lmqe-lWPLw",
+      image: "/uploads/77880bf8deb75a8410d2891163ef1339.jpg",
       tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
       username: "jacqlinegeng",
       avatar: "/uploads/zozo.png",
@@ -29,9 +29,9 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "NeuralViz",
+      title: "3DViz",
       description: "An AI-powered 3D visualization engine that transforms machine learning models and neural networks into interactive, immersive experiences. Uses Three.js and advanced ML techniques to visualize model architectures and real-time inference flows in 3D space.",
-      image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+      image: "/uploads/d9ecb1c9f0fbbfb8670d64d24285878a.jpg",
       tech: ["Three.js", "React", "Python", "PyTorch", "WebGL"],
       username: "jacqlinegeng",
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
