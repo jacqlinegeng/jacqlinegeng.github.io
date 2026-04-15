@@ -21,10 +21,10 @@ const Projects = () => {
       id: 2,
       title: "Vestibule",
       description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
-      image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
+      image: "https://kitbash3d.com/products/cyberpunk?srsltid=AfmBOopt-GoWyEHf0IVeYLpdwQQIjf1kIRIPTEI58EXvP0lmqe-lWPLw",
       tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
       username: "jacqlinegeng",
-      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      avatar: "/uploads/zozo.png",
       link: "https://vestibull.vercel.app/"
     },
     {
