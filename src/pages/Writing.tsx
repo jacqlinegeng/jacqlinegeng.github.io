@@ -71,7 +71,7 @@ const Writing = () => {
 
       <div className="pt-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-card border-border rounded-xl shadow-lg border overflow-hidden">
+          <div className="bg-card border-border rounded-xl shadow-lg border overflow-hidden" style={{ fontSize: "65%" }}>
             {/* Notes App Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-border">
               <div className="flex items-center space-x-2">

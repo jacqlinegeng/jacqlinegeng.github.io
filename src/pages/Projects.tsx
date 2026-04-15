@@ -20,7 +20,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Vestibule",
+      title: "Vestibull",
       description: "A gamified financial learning platform with a live portfolio tracker. Learn about financial markets through interactive challenges, earning rewards as you build investment knowledge and track real-time market data.",
       image: "/uploads/77880bf8deb75a8410d2891163ef1339.png",
       tech: ["React", "Node.js", "WebSocket", "FinAPI", "Gamification"],
@@ -121,7 +121,7 @@ const Projects = () => {
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-secondary rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
+                  className="bg-secondary rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col"
                   onClick={() => handleStoryOpen(projects.indexOf(project))}
                 >
                   <img
@@ -129,7 +129,7 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover"
                   />
-                  <div className="p-4">
+                  <div className="p-4 flex flex-col flex-1">
                     <h3 className="editorial-font font-semibold text-gray-900 dark:text-white mb-2 text-lg">
                       {project.title}
                     </h3>
@@ -148,7 +148,7 @@ const Projects = () => {
                     </div>
 
                     {project.link && (
-                      <div className="mt-4">
+                      <div className="mt-auto pt-4">
                         <a
                           href={project.link}
                           target="_blank"

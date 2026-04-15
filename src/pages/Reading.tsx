@@ -251,7 +251,7 @@ const Reading = () => {
       <TopMenuBar />
 
       <div className="pt-8 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Mac OS Window */}
           <div className="bg-card border-border rounded-xl shadow-lg border">
             {/* Mac OS Header */}
@@ -270,7 +270,7 @@ const Reading = () => {
             </div>
 
             {/* Content */}
-            <div className="p-8 max-h-[75vh] overflow-y-auto">
+            <div className="p-8 h-[70vh] overflow-y-auto">
               {/* Header */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-2">
