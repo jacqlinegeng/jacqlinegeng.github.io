@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <title>Jacqline Geng — Desktop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: light;
     --bg: oklch(0.97 0.006 70);
     --bg-2: oklch(0.94 0.008 70);
     --ink: oklch(0.20 0.012 60);
@@ -21,8 +19,8 @@
     --line-2: oklch(0.92 0.006 70);
     --win: oklch(0.995 0.003 70);
     --win-sidebar: oklch(0.955 0.006 70);
-    --accent: oklch(0.62 0.13 35);
-    --accent-soft: oklch(0.62 0.13 35 / 0.12);
+    --accent: #576490;
+    --accent-soft: rgba(87, 100, 144, 0.14);
     --lavender: #C0C9EE;
     --lavender-ink: #5B5FAF;
     --ok: oklch(0.72 0.14 145);
@@ -404,8 +402,13 @@
   .btn.primary:hover { background: oklch(0.30 0.01 60); }
 
   /* Dark */
-  body.dark { color-scheme: dark; --bg: oklch(0.20 0.008 60); --bg-2: oklch(0.24 0.008 60); --ink: oklch(0.95 0.006 70); --ink-2: oklch(0.78 0.008 70); --ink-3: oklch(0.60 0.008 70); --line: oklch(0.32 0.008 60); --line-2: oklch(0.27 0.008 60); --win: oklch(0.23 0.008 60); --win-sidebar: oklch(0.21 0.008 60); --accent: #C0C9EE; --accent-soft: rgba(192,201,238,0.18); }
-  body.dark .desktop { background: radial-gradient(1200px 800px at 85% 15%, oklch(0.30 0.02 60 / 0.6), transparent 60%), radial-gradient(900px 700px at 10% 90%, oklch(0.26 0.025 45 / 0.6), transparent 55%), linear-gradient(180deg, oklch(0.22 0.008 60), oklch(0.18 0.008 60)); }
+  body.dark { --bg: #020300; --bg-2: #0E1115; --ink: oklch(0.95 0.006 70); --ink-2: oklch(0.78 0.008 70); --ink-3: oklch(0.60 0.008 70); --line: #1F2530; --line-2: #151A22; --win: #0B0E13; --win-sidebar: #070A0E; --accent: #C0C9EE; --accent-soft: rgba(192,201,238,0.18); }
+  body.dark .desktop {
+    background:
+      radial-gradient(1200px 800px at 85% 15%, rgba(87, 100, 144, 0.28), transparent 60%),
+      radial-gradient(900px 700px at 10% 90%, rgba(60, 80, 120, 0.22), transparent 55%),
+      linear-gradient(180deg, #050810, #020300);
+  }
   body.dark .d-icon .glyph { background: linear-gradient(180deg, oklch(0.38 0.015 60), oklch(0.30 0.012 60)); border-color: oklch(0.50 0.01 60 / 0.5); color: oklch(0.95 0.006 70); }
   body.dark .d-icon .glyph.folder { background: linear-gradient(180deg, #8B95C8, #5B5FAF); border-color: rgba(192, 201, 238, 0.5); color: white; }
   body.dark .d-icon .label { color: oklch(0.92 0.006 70); text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
@@ -443,6 +446,28 @@
   body.dark .tl.min   { background: #FEBB2E; }
   body.dark .tl.max   { background: #28C840; }
 
+  /* About photo frame in dark mode */
+  body.dark .about-photo { background: #14181F; border: 1px solid #2A3140; box-shadow: 0 20px 40px -20px rgba(0,0,0,0.6); }
+  body.dark .about-photo img { mix-blend-mode: normal; }
+
+  /* Genesis founder pill in dark mode */
+  body.dark .genesis-pill {
+    background: rgba(192, 201, 238, 0.08);
+    border: 1px solid rgba(192, 201, 238, 0.25);
+    color: #D8DEF5;
+  }
+
+  /* Dark-mode menubar icon visibility */
+  body.dark .menubar svg { color: oklch(0.95 0.006 70); }
+  body.dark .mb-item { color: oklch(0.95 0.006 70); }
+
+  /* Theme toggle: show sun in dark, moon in light */
+  .mb-theme .mb-icon-sun { display: none; }
+  .mb-theme .mb-icon-moon { display: block; }
+  body.dark .mb-theme .mb-icon-sun { display: block; }
+  body.dark .mb-theme .mb-icon-moon { display: none; }
+  .mb-theme:hover { color: var(--accent); }
+
   @media (max-width: 900px) { .window { left: 12px !important; right: 12px !important; width: auto !important; } .desktop-icons { display: none; } }
 </style>
 </head>
@@ -470,6 +495,10 @@
     </div>
     <div class="mb-item" id="mb-search" title="Spotlight (Cmd K)" style="cursor:pointer;">
       <svg class="mb-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="4.5"/><path d="m14 14 3.5 3.5" transform="translate(-3.5 -3.5)"/></svg>
+    </div>
+    <div class="mb-item mb-theme" id="mb-theme" title="Toggle dark mode" style="cursor:pointer;">
+      <svg class="mb-icon mb-icon-sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6L13 13M3 13l1.4-1.4M11.6 4.4L13 3" stroke-linecap="round"/></svg>
+      <svg class="mb-icon mb-icon-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 9.5A6 6 0 1 1 6.5 3a5 5 0 0 0 6.5 6.5Z" stroke-linejoin="round"/></svg>
     </div>
     <div class="battery" title="87%"><span style="width: 87%;"></span></div>
     <div class="mb-item mb-clock" id="mb-clock">Tue 3:24 PM</div>
@@ -523,10 +552,10 @@
   <div class="tw-row">
     <span class="tw-label">Accent</span>
     <div class="tw-swatch" data-tw="accent">
-      <button data-v="35" class="on" style="background:oklch(0.62 0.13 35)"></button>
-      <button data-v="145" style="background:oklch(0.62 0.13 145)"></button>
-      <button data-v="280" style="background:oklch(0.62 0.13 280)"></button>
-      <button data-v="320" style="background:oklch(0.62 0.13 320)"></button>
+      <button data-v="lavender" class="on" style="background:#576490"></button>
+      <button data-v="rust" style="background:oklch(0.62 0.13 35)"></button>
+      <button data-v="sage" style="background:oklch(0.62 0.13 145)"></button>
+      <button data-v="blush" style="background:oklch(0.62 0.13 20)"></button>
     </div>
   </div>
   <div class="tw-row">
@@ -547,8 +576,8 @@
 
 <script>
 /*EDITMODE-BEGIN*/const TWEAKS = {
-  "theme": "light",
-  "accent": "35",
+  "theme": "dark",
+  "accent": "lavender",
   "layout": "list",
   "icons": "on"
 }/*EDITMODE-END*/;
