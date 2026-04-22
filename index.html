@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <title>Jacqline Geng — Desktop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
+    color-scheme: light;
     --bg: oklch(0.97 0.006 70);
     --bg-2: oklch(0.94 0.008 70);
     --ink: oklch(0.20 0.012 60);
@@ -402,7 +404,7 @@
   .btn.primary:hover { background: oklch(0.30 0.01 60); }
 
   /* Dark */
-  body.dark { --bg: oklch(0.20 0.008 60); --bg-2: oklch(0.24 0.008 60); --ink: oklch(0.95 0.006 70); --ink-2: oklch(0.78 0.008 70); --ink-3: oklch(0.60 0.008 70); --line: oklch(0.32 0.008 60); --line-2: oklch(0.27 0.008 60); --win: oklch(0.23 0.008 60); --win-sidebar: oklch(0.21 0.008 60); --accent: #C0C9EE; --accent-soft: rgba(192,201,238,0.18); }
+  body.dark { color-scheme: dark; --bg: oklch(0.20 0.008 60); --bg-2: oklch(0.24 0.008 60); --ink: oklch(0.95 0.006 70); --ink-2: oklch(0.78 0.008 70); --ink-3: oklch(0.60 0.008 70); --line: oklch(0.32 0.008 60); --line-2: oklch(0.27 0.008 60); --win: oklch(0.23 0.008 60); --win-sidebar: oklch(0.21 0.008 60); --accent: #C0C9EE; --accent-soft: rgba(192,201,238,0.18); }
   body.dark .desktop { background: radial-gradient(1200px 800px at 85% 15%, oklch(0.30 0.02 60 / 0.6), transparent 60%), radial-gradient(900px 700px at 10% 90%, oklch(0.26 0.025 45 / 0.6), transparent 55%), linear-gradient(180deg, oklch(0.22 0.008 60), oklch(0.18 0.008 60)); }
   body.dark .d-icon .glyph { background: linear-gradient(180deg, oklch(0.38 0.015 60), oklch(0.30 0.012 60)); border-color: oklch(0.50 0.01 60 / 0.5); color: oklch(0.95 0.006 70); }
   body.dark .d-icon .glyph.folder { background: linear-gradient(180deg, #8B95C8, #5B5FAF); border-color: rgba(192, 201, 238, 0.5); color: white; }
