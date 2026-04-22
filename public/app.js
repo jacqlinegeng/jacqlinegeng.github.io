@@ -76,11 +76,18 @@
   }
 
   // ---------- Tweaks ----------
+  const ACCENTS = {
+    lavender: { c: '#576490', soft: 'rgba(87, 100, 144, 0.16)', dark: '#C0C9EE', darkSoft: 'rgba(192, 201, 238, 0.22)' },
+    rust:     { c: 'oklch(0.62 0.13 35)',  soft: 'oklch(0.62 0.13 35 / 0.18)' },
+    sage:     { c: 'oklch(0.62 0.13 145)', soft: 'oklch(0.62 0.13 145 / 0.18)' },
+    blush:    { c: 'oklch(0.62 0.13 20)',  soft: 'oklch(0.62 0.13 20 / 0.18)' }
+  };
   function applyTweaks() {
     document.body.classList.toggle('dark', TWEAKS.theme === 'dark');
-    const h = TWEAKS.accent;
-    document.documentElement.style.setProperty('--accent', `oklch(0.62 0.13 ${h})`);
-    document.documentElement.style.setProperty('--accent-soft', `oklch(0.62 0.13 ${h} / 0.14)`);
+    const a = ACCENTS[TWEAKS.accent] || ACCENTS.lavender;
+    const isDark = TWEAKS.theme === 'dark';
+    document.documentElement.style.setProperty('--accent', isDark && a.dark ? a.dark : a.c);
+    document.documentElement.style.setProperty('--accent-soft', isDark && a.darkSoft ? a.darkSoft : a.soft);
     $('#desktop-icons').style.display = TWEAKS.icons === 'off' ? 'none' : 'grid';
     $$('.tw-seg').forEach(seg => {
       const key = seg.dataset.tw;
@@ -657,6 +664,13 @@
     $('#mb-search').addEventListener('click', openSpotlight);
     $('#mb-genesis').addEventListener('click', () => openApp('genesis'));
     $('#hero-mail').addEventListener('click', (e) => { e.preventDefault(); openMailModal(); });
+    const themeBtn = $('#mb-theme');
+    if (themeBtn) themeBtn.addEventListener('click', () => {
+      TWEAKS.theme = TWEAKS.theme === 'dark' ? 'light' : 'dark';
+      applyTweaks();
+      Object.keys(openWindows).forEach(id => reRenderApp(id));
+      try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: TWEAKS.theme } }, '*'); } catch (e) {}
+    });
   }
 
   function openSpotlight() {
