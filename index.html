@@ -158,6 +158,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (window.Babel && typeof window.Babel.transformScriptTags === 'function') {
       window.Babel.transformScriptTags();
     }
+    // The real DOMContentLoaded fired on the skeleton doc before we swapped
+    // the body in. Scripts like app.js that bind init() via
+    // addEventListener('DOMContentLoaded', init) would never run otherwise,
+    // so dispatch a synthetic one now that the template is live.
+    try {
+      document.dispatchEvent(new Event('DOMContentLoaded', { bubbles: true, cancelable: true }));
+      window.dispatchEvent(new Event('load'));
+    } catch (e) { console.error('synthetic DOMContentLoaded dispatch failed:', e); }
   } catch (err) {
     setStatus('Error unpacking: ' + err.message);
     console.error('Bundle unpack error:', err);
