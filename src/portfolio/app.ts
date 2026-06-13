@@ -293,6 +293,54 @@ function renderAbout(c) {
           <div class="diary-date">${today}</div>
           <h2 class="diary-greeting">${A.greeting}</h2>
           <div class="diary-body" id="diary-body"></div>
+          <div class="diary-pen" id="diary-pen" aria-hidden="true">
+            <svg viewBox="0 0 120 120" width="92" height="92" fill="none">
+              <defs>
+                <linearGradient id="pcBody" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#6A57A8"/>
+                  <stop offset="0.26" stop-color="#A78EDF"/>
+                  <stop offset="0.5" stop-color="#C7B2EE"/>
+                  <stop offset="0.74" stop-color="#9077D2"/>
+                  <stop offset="1" stop-color="#5E4C98"/>
+                </linearGradient>
+                <linearGradient id="pcWood" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#CBA877"/>
+                  <stop offset="0.5" stop-color="#F1DEBB"/>
+                  <stop offset="1" stop-color="#BE9869"/>
+                </linearGradient>
+                <linearGradient id="pcFerrule" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#8E90A6"/>
+                  <stop offset="0.5" stop-color="#E9EAF1"/>
+                  <stop offset="1" stop-color="#83859B"/>
+                </linearGradient>
+                <linearGradient id="pcEraser" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#B274A6"/>
+                  <stop offset="0.5" stop-color="#E2B6D6"/>
+                  <stop offset="1" stop-color="#A767A0"/>
+                </linearGradient>
+              </defs>
+              <g>
+                <!-- eraser -->
+                <path d="M50 20 L50 13 Q50 6 60 6 Q70 6 70 13 L70 20 Z" fill="url(#pcEraser)"/>
+                <!-- metal ferrule -->
+                <rect x="50" y="20" width="20" height="13" fill="url(#pcFerrule)"/>
+                <rect x="50" y="23.4" width="20" height="1.1" fill="rgba(0,0,0,0.16)"/>
+                <rect x="50" y="28.6" width="20" height="1.1" fill="rgba(0,0,0,0.16)"/>
+                <!-- hex barrel -->
+                <rect x="50" y="33" width="20" height="49" fill="url(#pcBody)"/>
+                <rect x="55.8" y="33" width="0.9" height="49" fill="rgba(30,20,50,0.16)"/>
+                <rect x="63.3" y="33" width="0.9" height="49" fill="rgba(30,20,50,0.18)"/>
+                <rect x="58.4" y="33" width="2.4" height="49" fill="rgba(255,255,255,0.26)"/>
+                <!-- sharpened wood cone -->
+                <polygon points="50,82 70,82 60,101" fill="url(#pcWood)"/>
+                <polygon points="60,82 70,82 60,101" fill="rgba(90,58,28,0.18)"/>
+                <polygon points="56,82 64,82 60,101" fill="rgba(255,255,255,0.20)"/>
+                <!-- graphite tip -->
+                <polygon points="56.6,93 63.4,93 60,110" fill="#3a3452"/>
+                <polygon points="60,93 63.4,93 60,110" fill="rgba(0,0,0,0.30)"/>
+              </g>
+            </svg>
+          </div>
           <div class="diary-sign" id="diary-sign" style="opacity:0;">${A.signature}</div>
           <div class="about-facts" id="about-facts" style="opacity:0;">
             ${A.facts.map(f => `<span class="fact"><span class="k">${f.k}</span><b>${f.v}</b></span>`).join('')}
@@ -318,11 +366,45 @@ function renderAbout(c) {
   // diary typewriter
   const token = ++typeToken;
   typeDiary($('#diary-body'), A.entry, token).then(ok => {
+    liftPen($('#diary-pen'));
     if (!ok) return;
     const sign = $('#diary-sign'); const facts = $('#about-facts');
     if (sign) { sign.style.transition = 'opacity .5s'; sign.style.opacity = '1'; }
     if (facts) { facts.style.transition = 'opacity .6s .2s'; facts.style.opacity = '1'; }
   });
+}
+
+/* ---------- wooden pencil that writes the diary out, stroke by stroke ---------- */
+/* the SVG graphite tip is at local point (60,110); transform-origin matches it,
+   so translating the element pins the tip onto the writing line. On top of the
+   left-to-right drift we layer fast micro-strokes + hand articulation so it
+   reads like a real hand forming each letter rather than gliding. */
+let penChars = 0;
+function movePen(diary, pen, lift) {
+  if (!pen || !diary) return;
+  const caret = diary.querySelector('.type-caret');
+  if (!caret) return;
+  const dr = diary.getBoundingClientRect();
+  const cr = caret.getBoundingClientRect();
+  const x = cr.left - dr.left;
+  const baseTop = cr.top - dr.top + cr.height - 2;     // tip on the writing line
+  const t = penChars++;
+  // writing micro-motion: the tip bobs up/down forming strokes, drifts a touch
+  const strokeY = Math.sin(t * 2.3) * 2.1 + Math.sin(t * 5.3) * 0.9;
+  const strokeX = Math.cos(t * 3.1) * 1.3;
+  const tilt    = Math.sin(t * 1.7) * 3.4;             // wrist articulation (deg)
+  const upY     = lift ? -9 : 0;                        // lift between words
+  const upTilt  = lift ? 5 : 0;
+  pen.style.opacity = '1';
+  pen.style.transform =
+    `translate(${x - 46 + strokeX}px, ${baseTop - 84 + strokeY + upY}px) ` +
+    `rotate(${40 + tilt + upTilt}deg)`;   // 40° base hold + wrist articulation
+}
+function liftPen(pen) {
+  if (!pen) return;
+  pen.style.transition = 'transform .6s cubic-bezier(.3,.55,.25,1), opacity .55s ease';
+  pen.style.opacity = '0';
+  pen.style.transform = (pen.style.transform || '') + ' translate(18px,-30px) rotate(7deg)';
 }
 
 /* photobooth: the strip grows from 0 height to full (grid 0fr -> 1fr) */
@@ -344,6 +426,10 @@ function playPhotobooth() {
 
 async function typeDiary(host, paragraphs, token) {
   host.innerHTML = '';
+  penChars = 0;
+  const diary = host.closest('.diary');
+  const pen = diary ? diary.querySelector('.diary-pen') : null;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   for (let pi = 0; pi < paragraphs.length; pi++) {
     const segs = paragraphs[pi];
     const p = document.createElement('p');
@@ -363,8 +449,23 @@ async function typeDiary(host, paragraphs, token) {
       caret.before(node);
       for (let i = 0; i < seg.t.length; i++) {
         if (token !== typeToken) return false;
-        node.textContent += seg.t[i];
-        await wait(11 + (seg.t[i] === ' ' ? 0 : Math.random() * 14) + (/[.,]/.test(seg.t[i]) ? 90 : 0));
+        const ch = seg.t[i];
+        const isSpace = ch === ' ';
+        if (isSpace) {
+          node.appendChild(document.createTextNode(' '));
+        } else {
+          // each glyph blooms in like ink settling onto paper
+          const s = document.createElement('span');
+          s.className = 'ink';
+          s.textContent = ch;
+          node.appendChild(s);
+          requestAnimationFrame(() => { s.style.opacity = '1'; });
+        }
+        if (!reduce) movePen(diary, pen, isSpace);
+        await wait(
+          (isSpace ? 26 : 15 + Math.random() * 18) +     // unhurried, slightly uneven hand
+          (/[.,;]/.test(ch) ? 120 : 0)                   // pause at punctuation
+        );
       }
     }
     caret.remove();
@@ -462,9 +563,12 @@ function renderReading(c) {
   const cover = (b, i) => `
     <div class="bk" data-bk="${encodeURIComponent(b.t)}">
       <div class="cov" style="background:${PAL[i % PAL.length]}">
-        <span class="covt"><b>${b.t}</b><i>${b.a}</i></span>
-        ${b.c ? `<img src="${R(b.c)}" alt="" onerror="this.remove()">` : ''}
-        ${b.s === 'reading' ? `<div class="prog" style="width:${b.p}%"></div>` : ''}
+        <div class="cov-spine"><span>${b.t}</span></div>
+        <div class="cov-face">
+          <span class="covt"><b>${b.t}</b><i>${b.a}</i></span>
+          ${b.c ? `<img src="${R(b.c)}" alt="" onerror="this.remove()">` : ''}
+          ${b.s === 'reading' ? `<div class="prog" style="width:${b.p}%"></div>` : ''}
+        </div>
       </div>
       <div class="bt">${b.t}</div>
       <div class="ba">${b.a}</div>

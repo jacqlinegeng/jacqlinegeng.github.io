@@ -268,6 +268,17 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(90deg, var(--lav-mid), var(--lav));
   border-radius: 6px 6px 0 0; opacity: 0.85;
 }
+.diary-pen {
+  position: absolute; top: 0; left: 0; width: 92px; height: 92px;
+  opacity: 0; pointer-events: none; z-index: 6;
+  transform-origin: 46px 84px;
+  transition: transform .055s linear, opacity .4s ease;
+  filter: drop-shadow(2px 5px 5px rgba(40,38,70,0.3));
+  will-change: transform;
+}
+/* ink blooms in as the pen lays it down (font unchanged from the original) */
+#diary-body .ink { opacity: 0; transition: opacity .15s ease; }
+#diary-body .type-caret { opacity: 0; }   /* the pen is the cursor */
 .diary-date { font-family: var(--hand); font-size: 26px; color: var(--lav-deep); text-align: right; line-height: 1; margin-bottom: 6px; }
 .diary-greeting { font-family: var(--sans); font-weight: 600; font-size: 25px; letter-spacing: -0.015em; margin: 0 0 16px; padding-left: 8px; }
 .zh { font-family: 'ZiYu YunShu', '字由云舒', 'Ma Shan Zheng', cursive; font-weight: 400; font-size: 1.25em; line-height: 1; }
@@ -385,7 +396,7 @@ a { color: inherit; text-decoration: none; }
   margin: 22px 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--lav);
   font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--ink); max-width: 60ch;
 }
-.note-foot { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
+.note-foot { margin-top: 30px; padding-top: 18px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
 .note-foot a { color: var(--lav-deep); border-bottom: 1px solid var(--lav-mid); }
 
 /* ============================================================
@@ -397,7 +408,7 @@ a { color: inherit; text-decoration: none; }
 .read-h .ct { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; }
 .read-h .rule { flex: 1; height: 1px; background: var(--line); }
 
-.shelf { display: flex; gap: 18px; overflow-x: auto; padding: 6px 2px 18px; scroll-snap-type: x proximity; }
+.shelf { display: flex; gap: 22px; overflow-x: auto; padding: 6px 2px 18px; scroll-snap-type: x proximity; perspective: 1500px; }
 .shelf.expanded { flex-wrap: wrap; overflow-x: visible; row-gap: 24px; }
 .expand-btn {
   font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -408,19 +419,55 @@ a { color: inherit; text-decoration: none; }
 .shelf::-webkit-scrollbar { height: 9px; }
 .shelf::-webkit-scrollbar-thumb { background: rgba(120,124,180,0.25); border-radius: 5px; }
 .shelf::-webkit-scrollbar-track { background: rgba(120,124,180,0.07); border-radius: 5px; }
-.bk { flex: 0 0 auto; width: 118px; cursor: pointer; scroll-snap-align: start; transition: transform .2s var(--ease); }
-.bk:hover { transform: translateY(-4px); }
+.bk { flex: 0 0 auto; width: 118px; cursor: pointer; scroll-snap-align: start; }
+/* 3D book: the cover rotates in space, the spine gives it depth */
 .bk .cov {
-  width: 118px; height: 174px; border-radius: 3px; overflow: hidden; position: relative;
-  background: var(--paper-2);
-  box-shadow: 2px 3px 9px rgba(40,38,70,0.2), inset -1px 0 0 rgba(0,0,0,0.12), inset 1px 0 0 rgba(255,255,255,0.18);
+  width: 118px; height: 174px; position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-26deg) translateZ(0);
+  transition: transform .55s cubic-bezier(.2,.7,.2,1);
 }
-.bk .cov img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 2; }
-.bk .cov::after { content: ""; position: absolute; top: 0; bottom: 0; left: 3px; width: 1px; z-index: 4; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.16), rgba(0,0,0,0.06)); }
+.bk:hover .cov { transform: rotateY(-4deg) translateZ(16px); }
+/* the printed front of the book */
+.bk .cov-face {
+  position: absolute; inset: 0; border-radius: 2px 3px 3px 2px; overflow: hidden;
+  background: inherit;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05) inset,
+              inset -1px 0 0 rgba(0,0,0,0.10), inset 1px 0 0 rgba(255,255,255,0.22);
+  transform: translateZ(8px);
+}
+.bk .cov-face img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 2; }
 .bk .prog { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--lav-deep); z-index: 3; }
 .bk .covt {
   position: absolute; inset: 0; z-index: 1; padding: 12px 10px 10px;
   display: flex; flex-direction: column; justify-content: space-between;
+}
+/* the spine: a panel hinged at the cover's left edge, swung back into depth */
+.bk .cov-spine {
+  position: absolute; top: 0; left: 0; height: 100%; width: 16px;
+  transform-origin: left center;
+  transform: translateZ(8px) rotateY(-90deg);
+  background: inherit;
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset -6px 0 12px rgba(0,0,0,0.22), inset 1px 0 0 rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+}
+.bk .cov-spine span {
+  font-family: var(--serif); font-size: 8.5px; color: rgba(40,38,70,0.7);
+  white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);
+  max-height: 150px; overflow: hidden; text-overflow: ellipsis; letter-spacing: .02em;
+}
+/* ground shadow that grounds the angled book */
+.bk .cov::after {
+  content: ""; position: absolute; left: -6px; right: 4px; bottom: -10px; height: 14px;
+  background: radial-gradient(50% 100% at 50% 0%, rgba(40,38,70,0.28), transparent 70%);
+  transform: translateZ(-2px); transition: opacity .5s; z-index: -1;
+}
+.bk:hover .cov::after { opacity: .55; }
+.bk .bt { transition: color .2s var(--ease); }
+.bk:hover .bt { color: var(--lav-deep); }
+@media (prefers-reduced-motion: reduce) {
+  .bk .cov, .bk:hover .cov { transform: rotateY(0deg); transition: none; }
 }
 .bk .covt b { font-family: var(--serif); font-weight: 400; font-size: 13.5px; line-height: 1.22; color: #34324E; letter-spacing: -0.01em; display: block; }
 .bk .covt i { font-family: var(--mono); font-style: normal; font-size: 8px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(52,50,78,0.65); display: block; }
@@ -571,6 +618,27 @@ a { color: inherit; text-decoration: none; }
   .page { padding: 34px 22px 80px; }
   .about-grid { grid-template-columns: 1fr; gap: 30px; }
   .photobooth { justify-content: flex-start; }
+  /* narrow screens: the strip prints out sideways, frames in a row */
+  .pb-machine { width: 100%; max-width: 440px; padding-top: 0; padding-left: 26px; }
+  .pb-clip {
+    width: auto; margin: 0;
+    grid-template-rows: 1fr; grid-template-columns: 0fr;
+    transition: grid-template-columns 4.5s cubic-bezier(.33,.66,.28,1);
+  }
+  .pb-clip.open { grid-template-columns: 1fr; }
+  .pb-strip {
+    width: auto; min-width: 0; flex-direction: row; align-items: stretch;
+    padding: 9px 11px 9px 9px; border-radius: 0 4px 4px 0;
+  }
+  .pb-frame { width: auto; flex: 1 1 0; }
+  .pb-cap {
+    writing-mode: vertical-rl; text-orientation: mixed;
+    display: flex; align-items: center; padding: 0 0 0 2px; font-size: 16px;
+  }
+  /* printer slot rotates to a vertical bar on the left edge */
+  .pb-slot { top: 0; bottom: 0; right: auto; width: 34px; height: auto; }
+  .pb-mouth { top: 16px; bottom: 16px; left: 13px; right: auto; width: 12px; height: auto; padding: 4px 0; }
+  .pb-mouth-inner { width: 4px; height: 100%; }
   .diary { padding: 28px 24px 32px; }
   .diary-body p { font-size: 15px; line-height: 30px; }
   .note-row { grid-template-columns: 1fr; gap: 4px; }
